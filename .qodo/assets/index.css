@@ -1,0 +1,226 @@
+body {
+  font-family: 'Poppins', 'Times New Roman', serif;
+  margin: 0 90px;
+  padding: 0;
+  text-align: center;
+  background-color: #2b2d42; /* fondo base azul grisáceo */
+  color: #edf2f4; /* texto claro */
+  border: none;
+}
+
+/* Encabezado */
+#portafolio {
+  background: linear-gradient(135deg, #0077b6, #ef233c);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  height: 180px;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Navegación */
+#nav-list {
+  display: inline-block;
+  margin-right: 25px;
+  font-size: 20px;
+  color: #edf2f4;
+  transition: color 0.3s ease;
+}
+
+#nav-list:hover {
+  color: #ef233c; /* rojo coral */
+}
+
+/* Foto */
+#foto-perfil {
+  border-radius: 50%;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border: 5px solid #0077b6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Acerca de mí */
+#descripcion-general {
+  font-size: 20px;
+  text-align: justify;
+  margin: 30px auto;
+  max-width: 700px;
+  line-height: 1.7;
+  background-color: #edf2f4;
+  color: #1a1a1a;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#descargar-cv {
+  background-color: #ef233c;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+#descargar-cv:hover {
+  background-color: #d90429;
+}
+
+/* Lista de valores */
+#valores-list {
+  font-size: 20px;
+  background-color: #edf2f4;
+  color: #1a1a1a;
+  margin: 20px;
+  list-style: none;
+  display: inline-block;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Proyectos */
+#proyectos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  background-color: #2b2d42;
+  padding: 40px 20px;
+}
+
+.proyecto {
+  background-color: #edf2f4;
+  color: #1a1a1a;
+  border-radius: 12px;
+  padding: 25px;
+  width: 320px;
+  height: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.proyecto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.proyecto img {
+  width: 120px;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 3px solid #0077b6;
+}
+
+/* Botones */
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.boton {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.boton:hover {
+  background-color: #023e8a;
+  transform: scale(1.05);
+}
+
+/* Habilidades */
+
+#habilidades {
+  background-color: #edf2f4;
+  color: #1a1a1a;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+}
+.Habilidades-T {
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 12px;
+  margin: 15px 0;
+  text-align: center;
+  padding: 5px; ;
+  width: 200px;
+  height: 450px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  display: inline-block;
+  border: solid 1px #0077b6;
+    
+}
+
+.Habilidades-T:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+#contacto {
+  background-color: #edf2f4;
+  color: #1a1a1a;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+}
+.contacto-list {
+  font-size: 20px;
+  background-color: #edf2f4;
+  color: #1a1a1a;
+  margin: 20px;
+  list-style: none;
+  display: inline-block;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.contacto-list:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.redes-list {
+  font-size: 20px;
+  background-color: #edf2f4;
+  color: #1a1a1a;
+  margin: 10px;
+  list-style: none;
+  display: inline-block;
+  padding: 5px 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.redes-list:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+#footer {
+  background-color: #1a1a1a;
+  color: #edf2f4;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  border-radius: 0 0 10px 10px;
+  margin-top: 20px;
+}
