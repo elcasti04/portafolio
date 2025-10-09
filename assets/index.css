@@ -160,11 +160,11 @@ body {
 	font-size: 22px;
 	font-weight: 600;
 	border-radius: 12px;
-	margin: 15px 0;
+	margin: 12px 0;
 	text-align: center;
-	padding: 5px;
-	width: 200px;
-	height: 450px;
+	padding: 30px;
+	width: 300px;
+	height: 480px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 	align-items: center;
 	display: inline-block;
@@ -270,7 +270,7 @@ body {
 	.proyecto {
 		width: 98vw;
 		min-width: 0;
-		max-width: 98vw;
+		max-width: 8vw;
 		height: auto;
 		padding: 12px;
 		font-size: 15px;
