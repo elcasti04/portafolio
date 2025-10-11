@@ -1,7 +1,7 @@
+/* -------------------- DESCARGAR CV -------------------- */
 document.getElementById('descargar-cv').addEventListener('click', function () {
 	const cvUrl =
 		'./assets/documents/Curriculum CV Profesional Andres Castro.pdf';
-
 	const link = document.createElement('a');
 	link.href = cvUrl;
 	link.download = 'Curriculum CV Profesional Andres Castro.pdf';
@@ -10,39 +10,52 @@ document.getElementById('descargar-cv').addEventListener('click', function () {
 	document.body.removeChild(link);
 });
 
-/*funcion formulario contacto */
+/* -------------------- FORMULARIO DE CONTACTO -------------------- */
 const enviarMensajeBtn = document.getElementById('enviar-mensaje');
 const dialogo = document.getElementById('dialogo-mensaje');
 const cerrarDialogoBtn = document.getElementById('cerrar-dialogo');
 
 function infoInput(e) {
 	e.preventDefault();
-	const name = document.getElementById('nombre').value.trim();
+	const nombre = document.getElementById('nombre').value.trim();
 	const email = document.getElementById('email').value.trim();
 	const mensaje = document.getElementById('mensaje').value.trim();
 
-	if (name && email && mensaje) {
-		mostrarMensaje();
-		document.getElementById('nombre').value = '';
-		document.getElementById('email').value = '';
-		document.getElementById('mensaje').value = '';
+	if (nombre && email && mensaje) {
+		// Enviar correo y luego limpiar y mostrar mensaje si fue exitoso
+		enviarCorreo(nombre, email, mensaje);
 	} else {
 		alert(
 			'Por favor, complete todos los campos del formulario antes de enviar su mensaje.',
 		);
 	}
 }
+
 function mostrarMensaje() {
 	dialogo.showModal();
 }
+
 enviarMensajeBtn.addEventListener('click', infoInput);
-cerrarDialogoBtn.addEventListener('click', () => {
-	dialogo.close();
+cerrarDialogoBtn.addEventListener('click', () => dialogo.close());
+
+/* -------------------- MODO CLARO/OSCURO -------------------- */
+document.getElementById('modo-claro').addEventListener('click', function () {
+	document.body.classList.toggle('modo-claro');
 });
 
-/* auto responder mensajes*/
+/* -------------------- CAMBIAR IDIOMA -------------------- */
+document
+	.getElementById('cambiar-idioma')
+	.addEventListener('click', function () {
+		const currentFile = window.location.pathname.split('/').pop();
+		window.location.href =
+			currentFile === 'index.html' ? 'index-en.html' : 'index.html';
+	});
 
+/* -------------------- ENVIAR CORREO CON EMAILJS -------------------- */
 function enviarCorreo(nombre, email, mensaje) {
+	emailjs.init('jxVCfyca7qoNr7htn'); // <-- reemplaza por tu PUBLIC KEY
+
 	emailjs
 		.send('service_4l0rdvp', 'template_kdtysec', {
 			from_name: nombre,
@@ -56,6 +69,14 @@ function enviarCorreo(nombre, email, mensaje) {
 					response.status,
 					response.text,
 				);
+
+				// Limpiar campos SOLO después de enviar correctamente
+				document.getElementById('nombre').value = '';
+				document.getElementById('email').value = '';
+				document.getElementById('mensaje').value = '';
+
+				// Mostrar mensaje de confirmación
+				mostrarMensaje();
 			},
 			function (error) {
 				console.error('Error al enviar correo', error);
@@ -63,20 +84,3 @@ function enviarCorreo(nombre, email, mensaje) {
 			},
 		);
 }
-
-/* cambiar modo claro-oscuro*/
-document.getElementById('modo-claro').addEventListener('click', function () {
-	document.body.classList.toggle('modo-claro');
-});
-
-/* cambiar idioma español - ingles*/
-document
-	.getElementById('cambiar-idioma')
-	.addEventListener('click', function () {
-		const currentFile = window.location.pathname.split('/').pop();
-		if (currentFile === 'index.html') {
-			window.location.href = 'index-en.html';
-		} else {
-			window.location.href = 'index.html';
-		}
-	});
