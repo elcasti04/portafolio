@@ -1,89 +1,129 @@
+/* Fuentes cartoon/futuristas */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Luckiest+Guy&display=swap');
+
 body {
-	font-family: 'Poppins', 'Times New Roman', serif;
-	margin: 0 90px;
+	font-family: 'Orbitron', 'Luckiest Guy', 'Poppins', 'Times New Roman', serif;
+	margin: 0 40px;
 	padding: 0;
 	text-align: center;
-	background-color: #2b2d42;
-	color: #e4e4ea;
+	background: linear-gradient(135deg, #232946 0%, #1e90ff 100%);
+	color: #f6f6f8;
 	border: none;
 }
 
 /* Encabezado */
 #portafolio {
-	background: linear-gradient(135deg, #0077b6, #ef233c);
-	color: #f6f6f8;
+	background: linear-gradient(120deg, #ff6f61 0%, #43e97b 100%);
+	color: #fff;
+	text-shadow: 2px 2px 0 #232946, 0 0 10px #43e97b;
 	text-align: center;
-	padding: 25px;
-	height: 180px;
+	padding: 30px;
+	height: 220px;
 	font-size: 32px;
 	font-weight: bold;
-	letter-spacing: 1px;
-	border-radius: 10px 10px 0 0;
+	letter-spacing: 2px;
+	border-radius: 18px 18px 0 0;
+	border: 5px solid #232946;
+	box-shadow: 0 8px 24px #23294688;
+	
 }
 
-/* Navegación */
 #nav-list {
+	list-style: none;
+	padding: 0;
+	margin: 20px 0 0 0;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	font-size: 18px;
 	display: inline-block;
-	margin-right: 25px;
-	font-size: 20px;
-	color: #e6e6eb;
-	transition: color 0.3s ease;
+}
+#nav-list:hover {
+	transform: scale(1.1) rotate(2deg);
+	box-shadow: 0 4px 16px #43e97b99;
+	color: #ff6f61;
 }
 
-#nav-list:hover {
-	color: #ef233c;
+/* Botones idioma y modo */
+#modo-claro,
+#cambiar-idioma {
+	background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+	border: 3px solid #232946;
+	cursor: pointer;
+	color: #232946;
+	font-size: 22px;
+	font-family: 'Luckiest Guy', cursive;
+	border-radius: 12px;
+	padding: 8px 18px;
+	margin: 0 8px;
+	box-shadow: 0 2px 8px #23294655;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#modo-claro:hover,
+#cambiar-idioma:hover {
+	transform: scale(1.1) rotate(-2deg);
+	box-shadow: 0 4px 16px #43e97b99;
+	color: #ff6f61;
 }
 
 /* Foto */
 #foto-perfil {
 	border-radius: 50%;
-	width: 280px;
-	height: 280px;
+	width: 220px;
+	height: 220px;
 	object-fit: cover;
-	border: 5px solid #0077b6;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	border: 8px solid #ff6f61;
+	box-shadow: 0 6px 20px #23294699, 0 0 0 12px #43e97b44;
 }
 
 /* Acerca de mí */
 #descripcion-general {
-	font-size: 20px;
+	font-size: 22px;
 	text-align: justify;
 	margin: 30px auto;
 	max-width: 700px;
 	line-height: 1.7;
-	background-color: #d8d9df;
-	color: #1a1a1a;
-	padding: 25px;
-	border-radius: 10px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	background: linear-gradient(90deg, #fff 80%, #43e97b22 100%);
+	color: #232946;
+	padding: 28px;
+	border-radius: 16px;
+	border: 4px solid #43e97b;
+	box-shadow: 0 6px 18px #23294655;
 }
 
+/* Botón descargar CV */
 #descargar-cv {
-	background-color: #ef233c;
-	color: white;
-	border: none;
-	padding: 12px 25px;
-	font-size: 16px;
+	background: linear-gradient(90deg, #ff6f61 0%, #f9cb40 100%);
+	color: #232946;
+	border: 3px solid #232946;
+	padding: 14px 32px;
+	font-size: 18px;
+	font-family: 'Luckiest Guy', cursive;
 	cursor: pointer;
-	border-radius: 6px;
-	transition: background 0.3s;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px #23294655;
+	transition: transform 0.2s, box-shadow 0.2s;
 }
 
 #descargar-cv:hover {
-	background-color: #d90429;
+	transform: scale(1.07) rotate(2deg);
+	box-shadow: 0 6px 20px #ff6f6199;
+	color: #fff;
 }
 
 /* Lista de valores */
 #valores-list {
-	font-size: 20px;
-	background-color: #e3e4e8;
-	color: #1a1a1a;
+	font-size: 22px;
+	background: linear-gradient(90deg, #f9cb40 0%, #43e97b 100%);
+	color: #232946;
 	margin: 20px;
 	list-style: none;
 	display: inline-block;
-	padding: 15px 25px;
-	border-radius: 10px;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	padding: 18px 32px;
+	border-radius: 14px;
+	border: 3px solid #232946;
+	box-shadow: 0 4px 12px #23294644;
 }
 
 /* Proyectos */
@@ -92,191 +132,240 @@ body {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: flex-start;
-	gap: 25px;
-	background-color: #2b2d42;
+	gap: 32px;
+	background: linear-gradient(135deg, #232946 60%, #43e97b 100%);
 	padding: 40px 20px;
+	border-radius: 18px;
 }
 
 .proyecto {
-	background-color: #e3e4e8;
-	color: #1a1a1a;
-	border-radius: 12px;
-	padding: 25px;
+	background: linear-gradient(120deg, #fff 80%, #43e97b22 100%);
+	color: #232946;
+	border-radius: 18px;
+	padding: 28px;
 	width: 330px;
-	height: 310px;
+	height: 350px;
 	text-align: center;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 8px 24px #23294688;
+	border: 4px solid #ff6f61;
 	transition: transform 0.3s, box-shadow 0.3s;
+	position: relative;
 }
 
 .proyecto:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+	transform: translateY(-8px) scale(1.04) rotate(-2deg);
+	box-shadow: 0 12px 32px #43e97b99;
+	border-color: #43e97b;
 }
 
 .proyecto img {
-	width: 100px;
+	width: 110px;
 	height: auto;
-	margin: 10px 0;
-	border-radius: 8px;
-	border: 3px solid #0077b6;
+	margin: 12px 0;
+	border-radius: 12px;
+	border: 4px solid #232946;
+	box-shadow: 0 2px 8px #43e97b99;
 }
 
-/* Botones */
+/* Botones de proyectos */
 .botones {
 	display: flex;
 	justify-content: center;
-	gap: 12px;
+	gap: 16px;
 }
 
 .boton {
-	background-color: #0077b6;
-	color: white;
-	border: none;
-	padding: 8px 14px;
-	border-radius: 6px;
+	background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+	color: #232946;
+	border: 3px solid #232946;
+	padding: 10px 18px;
+	border-radius: 10px;
 	cursor: pointer;
 	text-decoration: none;
-	font-weight: 500;
-	transition: background 0.3s ease, transform 0.2s;
+	font-weight: 700;
+	font-family: 'Orbitron', sans-serif;
+	transition: background 0.3s, transform 0.2s;
+	box-shadow: 0 2px 8px #23294655;
 }
 
 .boton:hover {
-	background-color: #023e8a;
-	transform: scale(1.05);
+	background: linear-gradient(90deg, #ff6f61 0%, #f9cb40 100%);
+	transform: scale(1.09) rotate(2deg);
+	color: #fff;
 }
 
 /* Habilidades */
 #habilidades {
-	background-color: #e3e4e8;
-	color: #1a1a1a;
-	padding: 30px 20px;
-	border-radius: 10px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	background: linear-gradient(90deg, #fff 80%, #43e97b22 100%);
+	color: #232946;
+	padding: 32px 20px;
+	border-radius: 16px;
+	box-shadow: 0 8px 24px #23294688;
 	margin-bottom: 40px;
+	border: 4px solid #43e97b;
 }
 
 .Habilidades-T {
-	font-size: 22px;
-	font-weight: 600;
-	border-radius: 12px;
-	margin: 12px 0;
+	font-size: 24px;
+	font-weight: 700;
+	border-radius: 16px;
+	margin: 16px 0;
 	text-align: center;
-	padding: 30px;
-	width: 300px;
+	padding: 32px;
+	width: 320px;
 	height: 480px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	align-items: center;
+	box-shadow: 0 4px 12px #23294644;
 	display: inline-block;
-	border: solid 1px #0077b6;
-	background-color: #ededf1;
+	border: 3px solid #ff6f61;
+	background: linear-gradient(90deg, #f9cb40 0%, #fff 100%);
+	transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .Habilidades-T:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+	transform: translateY(-8px) scale(1.04) rotate(-2deg);
+	box-shadow: 0 12px 32px #43e97b99;
+	border-color: #43e97b;
 }
 
 /* Contacto */
 #contacto {
-	background-color: #e3e4e8;
-	color: #1a1a1a;
-	padding: 30px 20px;
-	border-radius: 10px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	background: linear-gradient(90deg, #fff 80%, #43e97b22 100%);
+	color: #232946;
+	padding: 32px 20px;
+	border-radius: 16px;
+	box-shadow: 0 8px 24px #23294688;
 	margin-bottom: 40px;
+	border: 4px solid #43e97b;
 }
 
 .contacto-list {
-	font-size: 20px;
-	background-color: #e3e4e8;
-	color: #1a1a1a;
+	font-size: 22px;
+	background: linear-gradient(90deg, #f9cb40 0%, #43e97b 100%);
+	color: #232946;
 	margin: 20px;
 	list-style: none;
 	display: inline-block;
-	padding: 15px 25px;
-	border-radius: 10px;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	padding: 18px 32px;
+	border-radius: 14px;
+	border: 3px solid #232946;
+	box-shadow: 0 4px 12px #23294644;
 }
 
 .contacto-list:hover {
-	transform: translateY(-3px);
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	transform: translateY(-4px) scale(1.04) rotate(-2deg);
+	box-shadow: 0 8px 24px #43e97b99;
+	border-color: #43e97b;
 }
 
 .redes-list {
-	font-size: 20px;
-	background-color: #e3e4e8;
-	color: #1a1a1a;
+	font-size: 22px;
+	background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+	color: #232946;
 	margin: 10px;
 	list-style: none;
 	display: inline-block;
-	padding: 5px 5px;
-	border-radius: 10px;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	padding: 10px 18px;
+	border-radius: 14px;
+	border: 3px solid #232946;
+	box-shadow: 0 4px 12px #23294644;
 }
 
 .redes-list:hover {
-	transform: translateY(-3px);
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	transform: translateY(-4px) scale(1.04) rotate(2deg);
+	box-shadow: 0 8px 24px #ff6f6199;
+	border-color: #ff6f61;
 }
 
 /* Formulario */
 #formulario-contacto {
-	box-shadow: #20277a;
-	margin: 50px;
-	background-color: #023e8a;
-	height: 165%;
-	width: auto;
+	box-shadow: 0 4px 16px #23294688;
+	margin: 40px auto;
+	background: linear-gradient(90deg, #38f9d7 0%, #fff 100%);
+	width: 90vw;
+	max-width: 500px;
 	justify-content: center;
 	align-items: center;
-	border-radius: 25px;
+	border-radius: 24px;
 	text-align: center;
+	padding: 32px 0;
+	border: 4px solid #43e97b;
 }
 
 .contacto-titulo {
-	background-color: #436aa3;
-	border-radius: 8px;
+	background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+	border-radius: 10px;
+	color: #232946;
+	font-size: 22px;
+	padding: 8px 0;
+	margin-bottom: 12px;
 }
 
 .input-text {
-	height: 30px;
-	width: 50%;
+	height: 38px;
+	width: 80%;
+	border-radius: 8px;
+	border: 2px solid #232946;
+	font-size: 18px;
+	padding: 6px 12px;
+	margin-bottom: 12px;
+	background: #fff;
+	color: #232946;
+	box-shadow: 0 2px 8px #23294622;
+}
+
+#enviar-mensaje {
+	background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+	color: #232946;
+	border: 3px solid #232946;
+	padding: 12px 24px;
+	font-size: 18px;
+	font-family: 'Luckiest Guy', cursive;
+	cursor: pointer;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px #23294655;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+#enviar-mensaje:hover {
+	transform: scale(1.1) rotate(2deg);
+	box-shadow: 0 6px 20px #43e97b99;
+	color: #fff;
 }
 
 /* Footer */
 #footer {
-	background-color: #1a1a1a;
-	color: #e3e4e8;
+	background: linear-gradient(90deg, #232946 80%, #43e97b 100%);
+	color: #fff;
 	text-align: center;
-	padding: 15px 0;
-	font-size: 14px;
-	border-radius: 0 0 10px 10px;
+	padding: 18px 0;
+	font-size: 16px;
+	border-radius: 0 0 18px 18px;
 	margin-top: 20px;
+	border: 4px solid #43e97b;
+	box-shadow: 0 4px 12px #23294644;
 }
 
 /* Modo claro */
 body.modo-claro {
-	background-color: #f7f7f7;
-	color: #222;
+	background: linear-gradient(135deg, #f7f7f7 0%, #f9cb40 100%);
+	color: #232946;
 }
 
 body.modo-claro #portafolio,
 body.modo-claro section,
 body.modo-claro footer {
-	background-color: #ffffff;
-	color: #222;
+	background: linear-gradient(90deg, #fff 80%, #f9cb40 100%);
+	color: #232946;
 }
 
 body.modo-claro button,
 body.modo-claro input,
 body.modo-claro textarea {
-	background-color: #eaeaea;
-	color: #222;
-	border: 1px solid #ccc;
+	background: #fffbe6;
+	color: #232946;
+	border: 2px solid #f9cb40;
 }
 
-/* Responsive */
+/* Responsive cartoon */
 @media (max-width: 600px) {
 	body {
 		margin: 0 5px;
@@ -284,23 +373,26 @@ body.modo-claro textarea {
 	}
 
 	#portafolio {
-		font-size: 22px;
-		padding: 15px;
+		font-size: 24px;
+		padding: 12px;
 		height: auto;
+		border-radius: 12px 12px 0 0;
 	}
 
 	#foto-perfil {
-		width: 140px;
-		height: 140px;
+		width: 120px;
+		height: 120px;
 		margin: 10px 0;
+		border-width: 6px;
 	}
 
 	#descripcion-general {
 		font-size: 16px;
-		padding: 12px;
-		margin: 15px auto;
+		padding: 10px;
+		margin: 10px auto;
 		max-width: 98vw;
 		box-sizing: border-box;
+		border-radius: 10px;
 	}
 
 	#valores-list,
@@ -311,25 +403,29 @@ body.modo-claro textarea {
 		margin: 10px 0;
 		max-width: 98vw;
 		box-sizing: border-box;
+		border-radius: 10px;
 	}
 
 	#proyectos {
 		flex-direction: column;
 		gap: 15px;
 		padding: 15px 2px;
+		border-radius: 12px;
 	}
 
 	.proyecto {
 		width: 98vw;
 		min-width: 0;
 		height: auto;
-		padding: 12px;
+		padding: 10px;
 		font-size: 15px;
 		box-sizing: border-box;
+		border-radius: 12px;
 	}
 
 	.proyecto img {
-		width: 80px;
+		width: 70px;
+		border-width: 3px;
 	}
 
 	.botones {
@@ -339,25 +435,28 @@ body.modo-claro textarea {
 
 	#habilidades,
 	#contacto {
-		padding: 12px 5px;
+		padding: 10px 5px;
 		margin-bottom: 20px;
 		font-size: 15px;
 		max-width: 98vw;
 		box-sizing: border-box;
+		border-radius: 10px;
 	}
 
 	.Habilidades-T {
-		width: 80vw;
+		width: 90vw;
 		height: auto;
 		font-size: 16px;
 		margin: 8px 0;
 		padding: 8px;
 		box-sizing: border-box;
+		border-radius: 10px;
 	}
 
 	#footer {
 		font-size: 12px;
 		padding: 8px 0;
 		margin-top: 10px;
+		border-radius: 0 0 10px 10px;
 	}
 }
