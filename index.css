@@ -1,104 +1,126 @@
-/* Fuentes cartoon/futuristas */
+/* === Fuentes cartoon/futuristas === */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Luckiest+Guy&display=swap');
 
+html {
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
+}
+
 body {
-	font-family: 'Orbitron', 'Luckiest Guy', 'Poppins', 'Times New Roman', serif;
-	margin: 0 40px;
+	font-family: 'Orbitron', 'Luckiest Guy', 'Poppins', sans-serif;
+	margin: 0;
 	padding: 0;
 	text-align: center;
 	background: linear-gradient(135deg, #232946 0%, #1e90ff 100%);
 	color: #f6f6f8;
-	border: none;
+	overflow-x: hidden;
 }
 
-/* Encabezado */
+/* === Secciones principales === */
+section {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 20px;
+	box-sizing: border-box;
+	scroll-snap-align: start;
+}
+
+/* === Encabezado === */
 #portafolio {
 	background: linear-gradient(120deg, #ff6f61 0%, #43e97b 100%);
 	color: #fff;
 	text-shadow: 2px 2px 0 #232946, 0 0 10px #43e97b;
 	text-align: center;
-	padding: 30px;
-	height: 220px;
-	font-size: 32px;
+	padding: 20px;
+	font-size: 22px;
 	font-weight: bold;
-	letter-spacing: 2px;
+	letter-spacing: 1.2px;
 	border-radius: 18px 18px 0 0;
-	border: 5px solid #232946;
+	border: 4px solid #232946;
 	box-shadow: 0 8px 24px #23294688;
-	
+	scroll-snap-align: start;
+	width: 100%;
 }
 
 #nav-list {
 	list-style: none;
 	padding: 0;
-	margin: 20px 0 0 0;
+	margin: 10px 0 0 0;
 	display: flex;
 	justify-content: center;
-	gap: 20px;
-	font-size: 18px;
-	display: inline-block;
+	gap: 10px;
+	font-size: 14px;
 }
-#nav-list:hover {
-	transform: scale(1.1) rotate(2deg);
-	box-shadow: 0 4px 16px #43e97b99;
+
+#nav-list li {
+	cursor: pointer;
+	transition: transform 0.3s, color 0.3s;
+}
+
+#nav-list li:hover {
+	transform: scale(1.1);
 	color: #ff6f61;
 }
 
-/* Botones idioma y modo */
+/* === Botones idioma y modo === */
 #modo-claro,
 #cambiar-idioma {
 	background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
-	border: 3px solid #232946;
+	border: 2px solid #232946;
 	cursor: pointer;
 	color: #232946;
-	font-size: 22px;
+	font-size: 14px;
 	font-family: 'Luckiest Guy', cursive;
-	border-radius: 12px;
-	padding: 8px 18px;
-	margin: 0 8px;
-	box-shadow: 0 2px 8px #23294655;
-	transition: transform 0.2s, box-shadow 0.2s;
+	border-radius: 10px;
+	padding: 6px 12px;
+	margin: 6px;
+	box-shadow: 0 2px 6px #23294655;
+	transition: all 0.2s ease-in-out;
 }
 
 #modo-claro:hover,
 #cambiar-idioma:hover {
-	transform: scale(1.1) rotate(-2deg);
-	box-shadow: 0 4px 16px #43e97b99;
+	transform: scale(1.05);
+	box-shadow: 0 4px 12px #43e97b99;
 	color: #ff6f61;
 }
 
-/* Foto */
+/* === Foto de perfil === */
 #foto-perfil {
 	border-radius: 50%;
-	width: 220px;
-	height: 220px;
+	width: 140px;
+	height: 140px;
 	object-fit: cover;
-	border: 8px solid #ff6f61;
-	box-shadow: 0 6px 20px #23294699, 0 0 0 12px #43e97b44;
+	border: 4px solid #ff6f61;
+	box-shadow: 0 4px 10px #23294699;
+	margin-bottom: 14px;
 }
 
-/* Acerca de mí */
+/* === Descripción general === */
 #descripcion-general {
-	font-size: 22px;
+	font-size: 16px;
 	text-align: justify;
-	margin: 30px auto;
-	max-width: 700px;
-	line-height: 1.7;
+	margin: 14px auto;
+	max-width: 80vw;
+	line-height: 1.5;
 	background: linear-gradient(90deg, #fff 80%, #43e97b22 100%);
 	color: #232946;
-	padding: 28px;
-	border-radius: 16px;
-	border: 4px solid #43e97b;
-	box-shadow: 0 6px 18px #23294655;
+	padding: 16px;
+	border-radius: 10px;
+	border: 2px solid #43e97b;
+	box-shadow: 0 3px 10px #23294655;
 }
 
-/* Botón descargar CV */
+/* === Botón CV === */
 #descargar-cv {
 	background: linear-gradient(90deg, #ff6f61 0%, #f9cb40 100%);
 	color: #232946;
-	border: 3px solid #232946;
-	padding: 14px 32px;
-	font-size: 18px;
+	border: 2px solid #232946;
+	padding: 8px 18px;
+	font-size: 14px;
 	font-family: 'Luckiest Guy', cursive;
 	cursor: pointer;
 	border-radius: 10px;
@@ -107,356 +129,218 @@ body {
 }
 
 #descargar-cv:hover {
-	transform: scale(1.07) rotate(2deg);
-	box-shadow: 0 6px 20px #ff6f6199;
+	transform: scale(1.05);
+	box-shadow: 0 6px 16px #ff6f6199;
 	color: #fff;
 }
 
-/* Lista de valores */
+/* === Valores === */
 #valores-list {
-	font-size: 22px;
+	font-size: 15px;
 	background: linear-gradient(90deg, #f9cb40 0%, #43e97b 100%);
-	color: #232946;
-	margin: 20px;
-	list-style: none;
-	display: inline-block;
-	padding: 18px 32px;
-	border-radius: 14px;
-	border: 3px solid #232946;
-	box-shadow: 0 4px 12px #23294644;
-}
-
-/* Proyectos */
-#proyectos {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: flex-start;
-	gap: 32px;
-	background: linear-gradient(135deg, #232946 60%, #43e97b 100%);
-	padding: 40px 20px;
-	border-radius: 18px;
-}
-
-.proyecto {
-	background: linear-gradient(120deg, #fff 80%, #43e97b22 100%);
-	color: #232946;
-	border-radius: 18px;
-	padding: 28px;
-	width: 330px;
-	height: 350px;
-	text-align: center;
-	box-shadow: 0 8px 24px #23294688;
-	border: 4px solid #ff6f61;
-	transition: transform 0.3s, box-shadow 0.3s;
-	position: relative;
-}
-
-.proyecto:hover {
-	transform: translateY(-8px) scale(1.04) rotate(-2deg);
-	box-shadow: 0 12px 32px #43e97b99;
-	border-color: #43e97b;
-}
-
-.proyecto img {
-	width: 110px;
-	height: auto;
-	margin: 12px 0;
-	border-radius: 12px;
-	border: 4px solid #232946;
-	box-shadow: 0 2px 8px #43e97b99;
-}
-
-/* Botones de proyectos */
-.botones {
-	display: flex;
-	justify-content: center;
-	gap: 16px;
-}
-
-.boton {
-	background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
-	color: #232946;
-	border: 3px solid #232946;
-	padding: 10px 18px;
-	border-radius: 10px;
-	cursor: pointer;
-	text-decoration: none;
-	font-weight: 700;
-	font-family: 'Orbitron', sans-serif;
-	transition: background 0.3s, transform 0.2s;
-	box-shadow: 0 2px 8px #23294655;
-}
-
-.boton:hover {
-	background: linear-gradient(90deg, #ff6f61 0%, #f9cb40 100%);
-	transform: scale(1.09) rotate(2deg);
-	color: #fff;
-}
-
-/* Habilidades */
-#habilidades {
-	background: linear-gradient(90deg, #fff 80%, #43e97b22 100%);
-	color: #232946;
-	padding: 32px 20px;
-	border-radius: 16px;
-	box-shadow: 0 8px 24px #23294688;
-	margin-bottom: 40px;
-	border: 4px solid #43e97b;
-}
-
-.Habilidades-T {
-	font-size: 24px;
-	font-weight: 700;
-	border-radius: 16px;
-	margin: 16px 0;
-	text-align: center;
-	padding: 32px;
-	width: 320px;
-	height: 480px;
-	box-shadow: 0 4px 12px #23294644;
-	display: inline-block;
-	border: 3px solid #ff6f61;
-	background: linear-gradient(90deg, #f9cb40 0%, #fff 100%);
-	transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.Habilidades-T:hover {
-	transform: translateY(-8px) scale(1.04) rotate(-2deg);
-	box-shadow: 0 12px 32px #43e97b99;
-	border-color: #43e97b;
-}
-
-/* Contacto */
-#contacto {
-	background: linear-gradient(90deg, #fff 80%, #43e97b22 100%);
-	color: #232946;
-	padding: 32px 20px;
-	border-radius: 16px;
-	box-shadow: 0 8px 24px #23294688;
-	margin-bottom: 40px;
-	border: 4px solid #43e97b;
-}
-
-.contacto-list {
-	font-size: 22px;
-	background: linear-gradient(90deg, #f9cb40 0%, #43e97b 100%);
-	color: #232946;
-	margin: 20px;
-	list-style: none;
-	display: inline-block;
-	padding: 18px 32px;
-	border-radius: 14px;
-	border: 3px solid #232946;
-	box-shadow: 0 4px 12px #23294644;
-}
-
-.contacto-list:hover {
-	transform: translateY(-4px) scale(1.04) rotate(-2deg);
-	box-shadow: 0 8px 24px #43e97b99;
-	border-color: #43e97b;
-}
-
-.redes-list {
-	font-size: 22px;
-	background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
 	color: #232946;
 	margin: 10px;
 	list-style: none;
 	display: inline-block;
-	padding: 10px 18px;
-	border-radius: 14px;
-	border: 3px solid #232946;
-	box-shadow: 0 4px 12px #23294644;
+	padding: 10px 20px;
+	border-radius: 10px;
+	border: 2px solid #232946;
+	box-shadow: 0 4px 10px #23294644;
 }
 
-.redes-list:hover {
-	transform: translateY(-4px) scale(1.04) rotate(2deg);
-	box-shadow: 0 8px 24px #ff6f6199;
-	border-color: #ff6f61;
-}
-
-/* Formulario */
-#formulario-contacto {
-	box-shadow: 0 4px 16px #23294688;
-	margin: 40px auto;
-	background: linear-gradient(90deg, #38f9d7 0%, #fff 100%);
-	width: 90vw;
-	max-width: 500px;
+/* === Proyectos === */
+#proyectos {
+	background: linear-gradient(135deg, #232946 60%, #43e97b 100%);
+	border-radius: 18px;
+	padding: 30px 10px;
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	border-radius: 24px;
-	text-align: center;
-	padding: 32px 0;
-	border: 4px solid #43e97b;
+	gap: 16px;
+	display: inline-block;
 }
 
-.contacto-titulo {
-	background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
-	border-radius: 10px;
+.proyecto {
+	background: #fff;
 	color: #232946;
-	font-size: 22px;
-	padding: 8px 0;
-	margin-bottom: 12px;
+	border-radius: 10px;
+	padding: 14px;
+	width: 290px;
+	height: auto;
+	text-align: center;
+	box-shadow: 0 4px 12px #23294688;
+	border: 2px solid #ff6f61;
+	transition: all 0.3s;
+	display: inline-block;
+}
+
+.proyecto:hover {
+	transform: translateY(-6px) scale(1.03);
+	box-shadow: 0 10px 24px #43e97b99;
+	border-color: #43e97b;
+}
+
+.proyecto img {
+	width: 70px;
+	height: 70px;
+	border-radius: 10px;
+	border: 2px solid #232946;
+	box-shadow: 0 2px 6px #43e97b99;
+}
+/* Botones de proyectos */ 
+.botones { 
+	display: flex; 
+	justify-content: center; 
+	gap: 12px; 
+} 
+.boton { 
+	background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%); 
+	color: #232946; 
+	border: 2px solid #232946; 
+	padding: 8px 14px; 
+	border-radius: 8px; 
+	cursor: pointer; 
+	text-decoration: none; 
+	font-weight: 700; 
+	font-family: 'Orbitron', sans-serif; 
+	transition: background 0.3s, transform 0.2s; 
+	box-shadow: 0 2px 5px #23294655; }
+
+/* === Habilidades === */
+#habilidades {
+	background: linear-gradient(90deg, #fff 80%, #43e97b22 100%);
+	color: #232946;
+	padding: 20px 10px;
+	border-radius: 16px;
+	box-shadow: 0 6px 18px #23294688;
+	border: 3px solid #43e97b;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 16px;
+}
+
+.Habilidades-T {
+	font-size: 16px;
+	font-weight: 700;
+	border-radius: 12px;
+	padding: 14px;
+	width: 350px;
+	height: 190px;
+	box-shadow: 0 4px 12px #23294644;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid #ff6f61;
+	background: linear-gradient(90deg, #f9cb40 0%, #fff 100%);
+	transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.Habilidades-T:hover {
+	transform: scale(1.05);
+	box-shadow: 0 10px 26px #43e97b99;
+	border-color: #43e97b;
+}
+
+/* === Contacto === */
+#contacto {
+	background: linear-gradient(90deg, #fff 80%, #43e97b22 100%);
+	color: #232946;
+	padding: 24px 10px;
+	border-radius: 16px;
+	box-shadow: 0 6px 18px #23294688;
+	border: 3px solid #43e97b;
+	
+}
+
+.contacto-list { font-size: 18px; background: linear-gradient(90deg, #f9cb40 0%, #43e97b 100%); color: #232946; margin: 14px; list-style: none; display: inline-block; padding: 14px 24px; border-radius: 12px; border: 2px solid #232946; box-shadow: 0 4px 12px #23294644; }
+
+#formulario-contacto {
+	box-shadow: 0 4px 16px #23294688;
+	background: linear-gradient(90deg, #38f9d7 0%, #fff 100%);
+	width: 90vw;
+	max-width: 400px;
+	border-radius: 16px;
+	padding: 20px;
+	border: 2px solid #43e97b;
+	display: inline-block;
 }
 
 .input-text {
-	height: 38px;
+	height: 32px;
 	width: 80%;
 	border-radius: 8px;
 	border: 2px solid #232946;
-	font-size: 18px;
-	padding: 6px 12px;
-	margin-bottom: 12px;
-	background: #fff;
-	color: #232946;
-	box-shadow: 0 2px 8px #23294622;
+	font-size: 14px;
+	padding: 6px 8px;
+	margin-bottom: 10px;
+	
 }
 
-#enviar-mensaje {
-	background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
-	color: #232946;
-	border: 3px solid #232946;
-	padding: 12px 24px;
-	font-size: 18px;
-	font-family: 'Luckiest Guy', cursive;
-	cursor: pointer;
-	border-radius: 10px;
-	box-shadow: 0 2px 8px #23294655;
-	transition: transform 0.2s, box-shadow 0.2s;
-}
-#enviar-mensaje:hover {
-	transform: scale(1.1) rotate(2deg);
-	box-shadow: 0 6px 20px #43e97b99;
-	color: #fff;
+#enviar-mensaje { 
+	background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%); 
+	color: #232946; 
+	border: 2px solid #232946; 
+	padding: 10px 20px; 
+	font-size: 16px; 
+	font-family: 'Luckiest Guy', cursive; 
+	cursor: pointer; 
+	border-radius: 10px; 
+	box-shadow: 0 2px 8px #23294655; 
+	transition: transform 0.2s, box-shadow 0.2s; 
+} 
+#enviar-mensaje:hover { 
+	transform: scale(1.08); 
+	box-shadow: 0 6px 20px #43e97b99; 
+	color: #fff; 
 }
 
-/* Footer */
+/* === Footer === */
 #footer {
 	background: linear-gradient(90deg, #232946 80%, #43e97b 100%);
 	color: #fff;
 	text-align: center;
-	padding: 18px 0;
-	font-size: 16px;
-	border-radius: 0 0 18px 18px;
-	margin-top: 20px;
-	border: 4px solid #43e97b;
+	padding: 12px 0;
+	font-size: 14px;
+	border-radius: 0 0 16px 16px;
+	border: 2px solid #43e97b;
 	box-shadow: 0 4px 12px #23294644;
+	scroll-snap-align: end;
 }
 
-/* Modo claro */
-body.modo-claro {
-	background: linear-gradient(135deg, #f7f7f7 0%, #f9cb40 100%);
-	color: #232946;
-}
-
-body.modo-claro #portafolio,
-body.modo-claro section,
-body.modo-claro footer {
-	background: linear-gradient(90deg, #fff 80%, #f9cb40 100%);
-	color: #232946;
-}
-
-body.modo-claro button,
-body.modo-claro input,
-body.modo-claro textarea {
-	background: #fffbe6;
-	color: #232946;
-	border: 2px solid #f9cb40;
-}
-
-/* Responsive cartoon */
+/* === Responsive === */
 @media (max-width: 600px) {
 	body {
-		margin: 0 5px;
-		font-size: 16px;
+		font-size: 14px;
 	}
 
 	#portafolio {
-		font-size: 24px;
-		padding: 12px;
-		height: auto;
-		border-radius: 12px 12px 0 0;
+		font-size: 18px;
+		padding: 10px;
 	}
 
 	#foto-perfil {
-		width: 120px;
-		height: 120px;
-		margin: 10px 0;
-		border-width: 6px;
+		width: 100px;
+		height: 100px;
 	}
 
 	#descripcion-general {
-		font-size: 16px;
-		padding: 10px;
-		margin: 10px auto;
-		max-width: 98vw;
-		box-sizing: border-box;
-		border-radius: 10px;
-	}
-
-	#valores-list,
-	.contacto-list,
-	.redes-list {
-		font-size: 16px;
-		padding: 10px 8px;
-		margin: 10px 0;
-		max-width: 98vw;
-		box-sizing: border-box;
-		border-radius: 10px;
-	}
-
-	#proyectos {
-		flex-direction: column;
-		gap: 15px;
-		padding: 15px 2px;
-		border-radius: 12px;
+		font-size: 14px;
+		max-width: 90vw;
 	}
 
 	.proyecto {
-		width: 98vw;
-		min-width: 0;
+		width: 90vw;
 		height: auto;
-		padding: 10px;
-		font-size: 15px;
-		box-sizing: border-box;
-		border-radius: 12px;
-	}
-
-	.proyecto img {
-		width: 70px;
-		border-width: 3px;
-	}
-
-	.botones {
-		flex-direction: column;
-		gap: 8px;
-	}
-
-	#habilidades,
-	#contacto {
-		padding: 10px 5px;
-		margin-bottom: 20px;
-		font-size: 15px;
-		max-width: 98vw;
-		box-sizing: border-box;
-		border-radius: 10px;
+		font-size: 13px;
 	}
 
 	.Habilidades-T {
 		width: 90vw;
 		height: auto;
-		font-size: 16px;
-		margin: 8px 0;
-		padding: 8px;
-		box-sizing: border-box;
-		border-radius: 10px;
-	}
-
-	#footer {
-		font-size: 12px;
-		padding: 8px 0;
-		margin-top: 10px;
-		border-radius: 0 0 10px 10px;
+		font-size: 14px;
 	}
 }
