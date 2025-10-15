@@ -355,6 +355,7 @@ body.modo-claro textarea {
 		width: auto;
 		height: auto;
 		font-size: 13px;
+		align-items: center;
 	}
 
 	.Habilidades-T {
