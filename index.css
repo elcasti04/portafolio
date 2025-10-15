@@ -311,6 +311,25 @@ section {
 	scroll-snap-align: end;
 }
 
+/* Modo claro */ 
+body.modo-claro { 
+	background: linear-gradient(135deg, #f7f7f7 0%, #f9cb40 100%); 
+	color: #232946; 
+} 
+body.modo-claro #portafolio, 
+body.modo-claro section, 
+body.modo-claro footer { 
+	background: linear-gradient(90deg, #fff 80%, #f9cb40 100%); 
+	color: #232946; 
+} 
+body.modo-claro button, 
+body.modo-claro input, 
+body.modo-claro textarea { 
+	background: #fffbe6; 
+	color: #232946; 
+	border: 2px solid #f9cb40; 
+}
+
 /* === Responsive === */
 @media (max-width: 600px) {
 	body {
