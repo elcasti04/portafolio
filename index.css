@@ -352,7 +352,7 @@ body.modo-claro textarea {
 	}
 
 	.proyecto {
-		width: 90vw;
+		width: auto;
 		height: auto;
 		font-size: 13px;
 	}
