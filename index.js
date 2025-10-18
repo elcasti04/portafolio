@@ -1,14 +1,58 @@
 /* -------------------- DESCARGAR CV -------------------- */
-document.getElementById('descargar-cv').addEventListener('click', function () {
-	const cvUrl =
-		'./assets/documents/Curriculum CV Profesional Andres Arturo Castro.pdf';
-	const link = document.createElement('a');
-	link.href = cvUrl;
-	link.download = 'Curriculum CV Profesional Andres Arturo Castro.pdf';
-	document.body.appendChild(link);
-	link.click();
-	document.body.removeChild(link);
-});
+document
+	.getElementById('descargar-cv')
+	.addEventListener('click', async function () {
+		const cvUrl = './assets/documents/Curriculum_CV_Andres_Arturo_Castro.pdf';
+
+		try {
+			// Obtener el PDF como blob
+			const resp = await fetch(cvUrl);
+			if (!resp.ok)
+				throw new Error('No se pudo obtener el archivo CV: ' + resp.status);
+			const blob = await resp.blob();
+
+			// Intentar usar File System Access API (permite elegir carpeta Documents)
+			if (window.showSaveFilePicker) {
+				try {
+					const opts = {
+						suggestedName: 'Curriculum_CV_Andres_Arturo_Castro.pdf',
+						types: [
+							{
+								description: 'PDF',
+								accept: { 'application/pdf': ['.pdf'] },
+							},
+						],
+					};
+					const handle = await window.showSaveFilePicker(opts);
+					const writable = await handle.createWritable();
+					await writable.write(blob);
+					await writable.close();
+					return; // guardado exitoso
+				} catch (fsErr) {
+					console.warn(
+						'File System API falló o se canceló, usando fallback:',
+						fsErr,
+					);
+					// continuar al fallback
+				}
+			}
+
+			// Fallback: descargar vía enlace (carpeta de descargas del navegador)
+			const url = URL.createObjectURL(blob);
+			const link = document.createElement('a');
+			link.href = url;
+			link.download = 'Curriculum_CV_Andres_Arturo_Castro.pdf';
+			document.body.appendChild(link);
+			link.click();
+			document.body.removeChild(link);
+			URL.revokeObjectURL(url);
+		} catch (err) {
+			console.error('Error al descargar CV:', err);
+			alert(
+				'No se pudo descargar el CV. Asegúrate de servir el sitio desde un servidor (ej. Live Server) y revisar la consola.',
+			);
+		}
+	});
 
 /* -------------------- FORMULARIO DE CONTACTO -------------------- */
 const enviarMensajeBtn = document.getElementById('enviar-mensaje');
@@ -28,7 +72,7 @@ function infoInput(e) {
 		enviarCorreo(nombre, email, mensaje);
 	} else {
 		alert(
-			'Por favor, complete todos los campos del formulario antes de enviar su mensaje.'
+			'Por favor, complete todos los campos del formulario antes de enviar su mensaje.',
 		);
 	}
 }
@@ -75,7 +119,7 @@ function enviarCorreo(nombre, email, mensaje) {
 				console.log(
 					'Correo enviado exitosamente',
 					response.status,
-					response.text
+					response.text,
 				);
 
 				// Limpiar campos después del envío exitoso
@@ -89,7 +133,7 @@ function enviarCorreo(nombre, email, mensaje) {
 			function (error) {
 				console.error('Error al enviar correo', error);
 				alert('Hubo un problema al enviar el mensaje, intenta más tarde.');
-			}
+			},
 		);
 }
 
@@ -98,7 +142,7 @@ function enviarCorreo(nombre, email, mensaje) {
 document.addEventListener('DOMContentLoaded', function () {
 	if (typeof emailjs === 'undefined') {
 		console.error(
-			'❌ Error: EmailJS no está cargado. Asegúrate de haber incluido su script en el HTML.'
+			'❌ Error: EmailJS no está cargado. Asegúrate de haber incluido su script en el HTML.',
 		);
 	}
 });
