@@ -1,18 +1,16 @@
 /* === Fuentes cartoon/futuristas === */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Luckiest+Guy&display=swap');
 
 html {
 	scroll-behavior: smooth;
-	scroll-snap-type: y mandatory;
 }
 
 body {
-	font-family: 'Orbitron', 'Luckiest Guy', 'Poppins', sans-serif;
+	font-family: 'Times New Roman', serif;
 	margin: 0;
 	padding: 0;
 	text-align: center;
-	background: linear-gradient(135deg, #232946 0%, #1e90ff 100%);
-	color: #f6f6f8;
+	background-color: #1e3042;
+	color: #e0e0e0;
 	overflow-x: hidden;
 }
 
@@ -23,344 +21,461 @@ section {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 40px 20px;
+	padding: 60px 20px;
 	box-sizing: border-box;
-	scroll-snap-align: start;
+}
+
+/* === Header flotante === */
+header {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background: rgba(18, 18, 18, 0.95);
+	backdrop-filter: blur(10px);
+	padding: 1% 2%;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+	width: 100%;
+	min-height: 60px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 /* === Encabezado === */
 #portafolio {
-	background: linear-gradient(120deg, #ff6f61 0%, #43e97b 100%);
-	color: #fff;
-	text-shadow: 2px 2px 0 #232946, 0 0 10px #43e97b;
+	background: linear-gradient(120deg, #1a1a1a, #2c2c2c);
+	color: #e0e0e0;
+	text-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 	text-align: center;
-	padding: 20px;
+	padding: 2%;
 	font-size: 22px;
-	font-weight: bold;
-	letter-spacing: 1.2px;
-	border-radius: 18px 18px 0 0;
-	border: 4px solid #232946;
-	box-shadow: 0 8px 24px #23294688;
-	scroll-snap-align: start;
+	font-weight: 800;
+	letter-spacing: 1px;
+	border-radius: 18px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 	width: 100%;
 }
 
+/* === Navegación === */
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  padding: 0;
+  margin: 10px 0;
+}
+
 #nav-list {
-	list-style: none;
-	padding: 0;
-	margin: 10px 0 0 0;
-	display: flex;
-	justify-content: center;
-	gap: 10px;
-	font-size: 14px;
+  list-style: none;
+  font-size: 14px;
 }
 
 #nav-list li {
-	cursor: pointer;
-	transition: transform 0.3s, color 0.3s;
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+  font-weight: 600;
 }
 
 #nav-list li:hover {
-	transform: scale(1.1);
-	color: #ff6f61;
+  transform: translateY(-2px);
+  color: #007bff;
 }
+
 
 /* === Botones idioma y modo === */
 #modo-claro,
 #cambiar-idioma {
-	background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
-	border: 2px solid #232946;
+	background: linear-gradient(90deg, #333, #555);
+	border: none;
 	cursor: pointer;
-	color: #232946;
+	color: #e0e0e0;
 	font-size: 14px;
-	font-family: 'Luckiest Guy', cursive;
-	border-radius: 10px;
-	padding: 6px 12px;
-	margin: 6px;
-	box-shadow: 0 2px 6px #23294655;
-	transition: all 0.2s ease-in-out;
+	border-radius: 8px;
+	padding: 8px 12px;
+	margin: 0 4px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+	transition: all 0.3s ease;
 }
 
 #modo-claro:hover,
 #cambiar-idioma:hover {
-	transform: scale(1.05);
-	box-shadow: 0 4px 12px #43e97b99;
-	color: #ff6f61;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 /* === Foto de perfil === */
 #foto-perfil {
 	border-radius: 50%;
-	width: 140px;
-	height: 140px;
+	width: 150px;
+	height: 150px;
 	object-fit: cover;
-	border: 4px solid #ff6f61;
-	box-shadow: 0 4px 10px #23294699;
-	margin-bottom: 14px;
+	border: 3px solid #555;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	margin-bottom: 20px;
+	transition: transform 0.3s ease;
+}
+
+#foto-perfil:hover {
+	transform: scale(1.05);
 }
 
 /* === Descripción general === */
 #descripcion-general {
-	font-size: 16px;
+	font-size: 18px;
 	text-align: justify;
-	margin: 14px auto;
-	max-width: 80vw;
-	line-height: 1.5;
-	background: linear-gradient(90deg, #fff 80%, #43e97b22 100%);
-	color: #232946;
-	padding: 16px;
-	border-radius: 10px;
-	border: 2px solid #43e97b;
-	box-shadow: 0 3px 10px #23294655;
+	margin: 10px auto;
+	max-width: 900px;
+	line-height: 1.7;
+	background: rgba(30, 30, 30, 0.9);
+	padding: 12px;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	border: 1px solid #555;
+}
+/* === Acerca de mí === */
+#acerca-de-mi > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Contenedor de Motivación y Formación */
+#acerca-de-mi #desc {
+	display: inline-flex;
+	flex-direction: column;
+	width: 45%;
+	margin: 10px;
+}
+
+/* Poner ambos #desc en fila */
+#acerca-de-mi > div {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2px;
+}
+
+/* Forzar que el segundo li (Academlo) vaya abajo centrado */
+#acerca-de-mi ul {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#acerca-de-mi ul li:last-child {
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+	font-weight: bold;
 }
 
 /* === Botón CV === */
 #descargar-cv {
-	background: linear-gradient(90deg, #ff6f61 0%, #f9cb40 100%);
-	color: #232946;
-	border: 2px solid #232946;
-	padding: 8px 18px;
-	font-size: 14px;
-	font-family: 'Luckiest Guy', cursive;
+	background: linear-gradient(90deg, #333, #555);
+	color: #e0e0e0;
+	border: none;
+	padding: 12px 24px;
+	font-size: 16px;
 	cursor: pointer;
-	border-radius: 10px;
-	box-shadow: 0 2px 8px #23294655;
-	transition: transform 0.2s, box-shadow 0.2s;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+	transition: all 0.3s ease;
+	font-weight: 600;
 }
 
 #descargar-cv:hover {
-	transform: scale(1.05);
-	box-shadow: 0 6px 16px #ff6f6199;
-	color: #fff;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 /* === Valores === */
 #valores-list {
-	font-size: 15px;
-	background: linear-gradient(90deg, #f9cb40 0%, #43e97b 100%);
-	color: #232946;
-	margin: 10px;
+	font-size: 16px;
+	background: rgba(30, 30, 30, 0.9);
+	color: #e0e0e0;
+	margin: 15px;
 	list-style: none;
 	display: inline-block;
-	padding: 10px 20px;
+	padding: 15px 20px;
 	border-radius: 10px;
-	border: 2px solid #232946;
-	box-shadow: 0 4px 10px #23294644;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+	border: 1px solid #555;
+	font-style: italic;
 }
 
 /* === Proyectos === */
 #proyectos {
-	background: linear-gradient(135deg, #232946 60%, #43e97b 100%);
-	border-radius: 18px;
-	padding: 30px 10px;
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: row;
+	flex-wrap: nowrap;
 	justify-content: center;
-	align-items: center;
-	gap: 16px;
-	display: inline-block;
+	gap: 20px;
 }
 
 .proyecto {
-	background: #fff;
-	color: #232946;
-	border-radius: 10px;
-	padding: 14px;
-	width: 290px;
-	height: auto;
-	text-align: center;
-	box-shadow: 0 4px 12px #23294688;
-	border: 2px solid #ff6f61;
-	transition: all 0.3s;
-	display: inline-block;
+	background: rgba(30, 30, 30, 0.9);
+	color: #e0e0e0;
+	border-radius: 12px;
+	padding: 20px;
+	width: 240px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	border: 1px solid #555;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .proyecto:hover {
-	transform: translateY(-6px) scale(1.03);
-	box-shadow: 0 10px 24px #43e97b99;
-	border-color: #43e97b;
+	transform: translateY(-5px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .proyecto img {
 	width: 70px;
 	height: 70px;
 	border-radius: 10px;
-	border: 2px solid #232946;
-	box-shadow: 0 2px 6px #43e97b99;
 }
-/* Botones de proyectos */ 
-.botones { 
-	display: flex; 
-	justify-content: center; 
-	gap: 12px; 
-} 
-.boton { 
-	background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%); 
-	color: #232946; 
-	border: 2px solid #232946; 
-	padding: 8px 14px; 
-	border-radius: 8px; 
-	cursor: pointer; 
-	text-decoration: none; 
-	font-weight: 700; 
-	font-family: 'Orbitron', sans-serif; 
-	transition: background 0.3s, transform 0.2s; 
-	box-shadow: 0 2px 5px #23294655; }
+
+/* Botones de proyectos */
+.botones {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+}
+
+.boton {
+	background: linear-gradient(90deg, #333, #555);
+	color: #e0e0e0;
+	border: none;
+	padding: 10px 16px;
+	border-radius: 6px;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+	font-size: 14px;
+}
+
+.boton:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
 
 /* === Habilidades === */
-#habilidades {
-	background: linear-gradient(90deg, #fff 80%, #43e97b22 100%);
-	color: #232946;
-	padding: 20px 10px;
-	border-radius: 16px;
-	box-shadow: 0 6px 18px #23294688;
-	border: 3px solid #43e97b;
+#habilidades ul {
 	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 16px;
+	gap: 20px;
+	align-items: stretch;
 }
 
 .Habilidades-T {
 	font-size: 16px;
-	font-weight: 700;
-	border-radius: 12px;
-	padding: 14px;
-	width: 350px;
-	height: 190px;
-	box-shadow: 0 4px 12px #23294644;
-	display: inline-flex;
+	font-weight: 600;
+	border-radius: 50px;
+	padding: 20px;
+	width: 280px;
+	height: 160px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	border: 1px solid #555;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	border: 2px solid #ff6f61;
-	background: linear-gradient(90deg, #f9cb40 0%, #fff 100%);
-	transition: transform 0.3s, box-shadow 0.3s;
-
+	background: rgba(30, 30, 30, 0.9);
+	color: #e0e0e0;
+	transition: transform 0.3s ease;
+	text-align: center;
 }
 
 .Habilidades-T:hover {
-	transform: scale(1.05);
-	box-shadow: 0 10px 26px #43e97b99;
-	border-color: #43e97b;
+	transform: translateY(-5px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* === Contacto === */
 #contacto {
-	background: linear-gradient(90deg, #fff 80%, #43e97b22 100%);
-	color: #232946;
-	padding: 24px 10px;
-	border-radius: 16px;
-	box-shadow: 0 6px 18px #23294688;
-	border: 3px solid #43e97b;
-	
+	background: rgba(30, 30, 30, 0.9);
+	padding: 40px;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	border: 1px solid #555;
 }
 
-.contacto-list { font-size: 18px; background: linear-gradient(90deg, #f9cb40 0%, #43e97b 100%); color: #232946; margin: 14px; list-style: none; display: inline-block; padding: 14px 24px; border-radius: 12px; border: 2px solid #232946; box-shadow: 0 4px 12px #23294644; }
+.contacto-list {
+	font-size: 18px;
+	background: rgba(40, 40, 40, 0.9);
+	color: #e0e0e0;
+	margin: 15px;
+	list-style: none;
+	display: inline-block;
+	padding: 15px 25px;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+	border: 1px solid #555;
+	transition: transform 0.3s ease;
+}
+
+.contacto-list:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
 #formulario-contacto {
-	box-shadow: 0 4px 16px #23294688;
-	background: linear-gradient(90deg, #38f9d7 0%, #fff 100%);
+	background: rgba(30, 30, 30, 0.9);
 	width: 90vw;
-	max-width: 400px;
-	border-radius: 16px;
-	padding: 20px;
-	border: 2px solid #43e97b;
-	display: inline-block;
+	max-width: 420px;
+	border-radius: 12px;
+	padding: 25px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	border: 1px solid #555;
 }
 
 .input-text {
-	height: 32px;
-	width: 80%;
-	border-radius: 8px;
-	border: 2px solid #232946;
-	font-size: 14px;
-	padding: 6px 8px;
-	margin-bottom: 10px;
-	
+	height: 40px;
+	width: 100%;
+	border-radius: 6px;
+	border: 1px solid #555;
+	font-size: 16px;
+	padding: 8px 12px;
+	margin-bottom: 15px;
+	transition: border-color 0.3s ease;
 }
 
-#enviar-mensaje { 
-	background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%); 
-	color: #232946; 
-	border: 2px solid #232946; 
-	padding: 10px 20px; 
-	font-size: 16px; 
-	font-family: 'Luckiest Guy', cursive; 
-	cursor: pointer; 
-	border-radius: 10px; 
-	box-shadow: 0 2px 8px #23294655; 
-	transition: transform 0.2s, box-shadow 0.2s; 
-} 
-#enviar-mensaje:hover { 
-	transform: scale(1.08); 
-	box-shadow: 0 6px 20px #43e97b99; 
-	color: #fff; 
+.input-text:focus {
+	border-color: #007bff;
+	outline: none;
+}
+
+#enviar-mensaje {
+	background: linear-gradient(90deg, #333, #555);
+	color: #e0e0e0;
+	border: none;
+	padding: 12px 24px;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 6px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+	transition: all 0.3s ease;
+	font-weight: 600;
+}
+
+#enviar-mensaje:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 /* === Footer === */
 #footer {
-	background: linear-gradient(90deg, #232946 80%, #43e97b 100%);
-	color: #fff;
+	background: rgba(18, 18, 18, 0.9);
+	color: #e0e0e0;
 	text-align: center;
-	padding: 12px 0;
+	padding: 14px 0;
 	font-size: 14px;
-	border-radius: 0 0 16px 16px;
-	border: 2px solid #43e97b;
-	box-shadow: 0 4px 12px #23294644;
-	scroll-snap-align: end;
+	box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+}
+/* === Modo Claro === */
+.modo-claro body {
+	background: #ffffff !important;
+	color: #1e3042;
 }
 
-/* Modo claro */ 
-body.modo-claro { 
-	background: linear-gradient(135deg, #f7f7f7 0%, #f9cb40 100%); 
-	color: #232946; 
-} 
-body.modo-claro #portafolio, 
-body.modo-claro section, 
-body.modo-claro footer { 
-	background: linear-gradient(90deg, #fff 80%, #f9cb40 100%); 
-	color: #232946; 
-} 
-body.modo-claro button, 
-body.modo-claro input, 
-body.modo-claro textarea { 
-	background: #fffbe6; 
-	color: #232946; 
-	border: 2px solid #f9cb40; 
+.modo-claro header {
+	background: rgba(255, 255, 255, 0.95);
+	box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
 }
 
+.modo-claro #portafolio {
+	background: linear-gradient(120deg, #007bff, #0056b3);
+	color: #fff;
+}
+
+.modo-claro #modo-claro,
+.modo-claro #cambiar-idioma {
+	background: linear-gradient(90deg, #007bff, #0056b3);
+	color: #fff;
+	box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+.modo-claro #foto-perfil {
+	border: 3px solid #007bff;
+	box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.modo-claro #descripcion-general,
+.modo-claro #valores-list,
+.modo-claro .proyecto,
+.modo-claro .Habilidades-T,
+.modo-claro #contacto,
+.modo-claro .contacto-list,
+.modo-claro #formulario-contacto,
+.modo-claro #acerca-de-mi h2,
+.modo-claro #acerca-de-mi p,
+.modo-claro #acerca-de-mi h3,
+.modo-claro #acerca-de-mi ul li,
+.modo-claro #acerca-de-mi button {
+	background: #ffffff !important;
+	color: #2c3e50 !important;
+	border: 1px solid #e0e0e0 !important;
+}
+
+.modo-claro #descargar-cv,
+.modo-claro .boton,
+.modo-claro #enviar-mensaje {
+	background: linear-gradient(90deg, #007bff, #0056b3);
+	color: #fff;
+	box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+.modo-claro #footer {
+	background: #ffffff;
+	color: #2c3e50;
+	box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modo-claro .input-text {
+	border: 1px solid #ddd;
+}
 /* === Responsive === */
 @media (max-width: 600px) {
-	body {
-		font-size: 14px;
-	}
-
 	#portafolio {
-		font-size: 18px;
-		padding: 10px;
+		font-size: 20px;
 	}
 
 	#foto-perfil {
-		width: 100px;
-		height: 100px;
+		width: 110px;
+		height: 110px;
 	}
 
-	#descripcion-general {
-		font-size: 14px;
-		max-width: 90vw;
-	}
-
-	.proyecto {
-		width: auto;
-		height: auto;
-		font-size: 13px;
-		align-items: center;
-	}
-
+	.proyecto,
 	.Habilidades-T {
 		width: 90vw;
+	}
+
+	#proyectos {
+		flex-wrap: wrap;
+	}
+
+	#habilidades ul {
+		flex-wrap: wrap;
+	}
+
+	#acerca-de-mi {
 		height: auto;
-		font-size: 14px;
+		width: 100%;
+		flex-direction: column;
+		padding: 40px 20px;
+	}
+
+	#acerca-de-mi h2,
+	#acerca-de-mi p,
+	#acerca-de-mi h3,
+	#acerca-de-mi ul li,
+	#acerca-de-mi button {
+		max-width: none;
+		width: 100%;
 	}
 }

@@ -16,13 +16,10 @@
     href="assets/image/iconos/icons8-portfolio-48.png"
   />
 </head>
-
-<body>
-  <section id="portfolio">
-    <div id="portafolio">
-      <h1>Desarrollador Web</h1>
+<header>
       <ul>
-        <li id="nav-list"><a href="#inicio">Inicio</a></li>
+        <li id="nav-list"><a href="#portfolio"><img width="20px" height="20px" src="https://img.icons8.com/?size=100&id=i6fZC6wuprSu&format=png&color=000000" alt="home">Inicio</a></li>
+        <li id="nav-list"><a href="#descripcion">Descripcion</a></li> 
         <li id="nav-list"><a href="#acerca-de-mi">Acerca de mí</a></li>
         <li id="nav-list"><a href="#proyectos">Proyectos</a></li>
         <li id="nav-list"><a href="#habilidades">Habilidades</a></li>
@@ -35,7 +32,7 @@
             src="https://img.icons8.com/external-glyph-silhouettes-icons-papa-vector/18/external-Light-Mode-interface-glyph-silhouettes-icons-papa-vector.png"
             alt="Modo Claro"
           />
-          <br>Vista
+          <br>
         </button>
 
         <button id="cambiar-idioma">
@@ -45,20 +42,34 @@
             src="https://img.icons8.com/ios/18/translation.png" 
             alt="translation"
           />
-          <br>Idioma
+          <br>
         </button>
       </ul>
+</header>
+
+<body>
+  <section id="portfolio">
+    <div id="portafolio">
+      <h1>Desarrollador Web</h1>
+      <h1>Especialista Back-End</h1>
+      <h3>Programador Full Stack</h3>
     </div>
   </section>
 
-  <br />
-
   <!-- Inicio -->
-  <section id="inicio">
+  <section id="descripcion">
     <div>
       <img id="foto-perfil" src="assets/image/avatar.jpg" alt="Foto de perfil" />
       <h1>Andrés Arturo Castro Orozco</h1>
       <p>Desarrollador Web Full Stack y estudiante de Ingeniería de Software.</p>
+      <br>
+      <h2>Descripción</h2>
+      <p id="descripcion-general">
+        Desarrollador web y estudiante de Ingeniería de Software, con conocimientos en HTML, CSS, 
+        JavaScript, React, NodeJs, Angular, Express, PostgreSQL, MongoDB, GitHub y mas. Me interesa 
+        aprender nuevas tecnologías y participar en proyectos que impulsen mi crecimiento profesional 
+        y contribuyan con soluciones innovadoras.
+      </p>
     </div>
   </section>
 
@@ -66,23 +77,28 @@
 
   <!-- Acerca de mí -->
   <section id="acerca-de-mi">
+
     <div>
-      <h2>Descripción</h2>
-      <p id="descripcion-general">
-        Desarrollador web en formación y estudiante de Ingeniería de Software, con conocimientos en HTML, CSS, JavaScript y React. Me interesa aprender nuevas tecnologías y participar en proyectos que impulsen mi crecimiento profesional y contribuyan con soluciones innovadoras.
-      </p>
+       <h2>Acerca de mi</h2>
+      <div>
       <br />
       <button id="descargar-cv">Descargar CV</button>
+      </div>
       <br>
+      <div>
+      <p id="valores-list">“Primero resuelve el problema, después escribe el código”</p> 
+      </div>
 
-      <p id="valores-list">“Primero resuelve el problema, después escribe el código”</p>
+      
 
       <br />
+      <div id="desc">
       <h3>Motivación</h3>
       <p id="descripcion-general">
         Saber que tu trabajo es valorado, recibir comentarios positivos y ver tu código implementado en proyectos reales genera una gran satisfacción y motivación para seguir mejorando cada día.
       </p>
-      <br />
+      </div>
+      <div id="desc">
       <h3>Formación</h3>
       <ul>
         <li id="valores-list">
@@ -92,6 +108,7 @@
           Desarrollador Web formado en Academlo como Desarrollador Full Stack.
         </li>
       </ul>
+      </div>
     </div>
   </section>
 
@@ -100,7 +117,7 @@
   <!-- Proyectos -->
  
   <section id="proyectos">
-     <h2>Proyectos</h2>
+    <h2>Proyectos</h2>
     <div class="proyecto">
       <h3>Rick and Morty API</h3>
       <p>Aplicación web desarrollada con React basada en la serie "Rick and Morty", que consume una API para mostrar información de los personajes.</p>
@@ -149,33 +166,57 @@
     <h2>Habilidades</h2>
     <ul>
       <li class="Habilidades-T">
-        <img src="assets/image/iconos/icono-html.gif" alt="html-icono" /> <br> HTML
-        <hr>
+        <img width="50" height="50" src="https://img.icons8.com/?size=100&id=1043&format=png&color=000000" alt="html-icono" /> <br> HTML
+    
         <p>Tengo un sólido dominio de HTML5, lo que me permite estructurar páginas web de manera clara, semántica y accesible.</p>
       </li>
 
       <li class="Habilidades-T">
         <img src="https://img.icons8.com/ios/50/css3.png" alt="css3-icono" /> <br> CSS
-        <hr>
+      
         <p>Disfruto trabajar con CSS, ya que me permite dar estilo, color y vida a las páginas con tipografías modernas y efectos dinámicos.</p>
       </li>
 
       <li class="Habilidades-T">
         <img src="assets/image/iconos/icons8-react-native.gif" alt="react-icono" /> <br> React
-        <hr>
+      
         <p>Manejo React.js para crear interfaces modernas, modulares y eficientes con componentes reutilizables y hooks.</p>
       </li>
 
       <li class="Habilidades-T">
         <img width="50" height="50" src="https://img.icons8.com/windows/50/node-js.png" alt="node-js" /> <br> Node.js
-        <hr>
+        
         <p>Con Node.js desarrollo el lado del servidor, creando aplicaciones rápidas, eficientes y escalables.</p>
       </li>
 
       <li class="Habilidades-T">
-        <img src="assets/image/iconos/icons8-javascript.gif" alt="JS-icono" /> <br> JavaScript
-        <hr>
+        <img width="48" height="48" src="https://img.icons8.com/?size=100&id=39853&format=png&color=000000" alt="JS-icono" /> <br> JavaScript
         <p>Con JavaScript hago que las páginas sean interactivas, ofreciendo experiencias dinámicas y fluidas.</p>
+      </li>
+
+      <li class="Habilidades-T">
+        <img width="48" height="48" src="https://img.icons8.com/?size=100&id=36387&format=png&color=000000" alt="angular-icono" /> <br> Angular
+        <p>Manejo Angular para crear aplicaciones web modernas, escalables y bien estructuradas con componentes y TypeScript.</p>
+      </li>
+
+      <li class="Habilidades-T">
+        <img width="48" height="48" src="https://img.icons8.com/?size=100&id=9Gfx4Dfxl0JK&format=png&color=000000" alt="express-icono" /> <br> Express
+        <p>Manejo Express.js para crear APIs rápidas y seguras.</p>
+      </li>
+
+      <li class="Habilidades-T">
+        <img width="48" height="48" src="https://img.icons8.com/?size=100&id=eJCmZxqMUnt8&format=png&color=000000" alt="postgre-icono" /> <br> Postgre-SQL
+        <p>Manejo PostgreSQL para bases de datos relacionales eficientes.</p>
+      </li>
+
+      <li class="Habilidades-T">
+        <img width="48" height="48" src="https://img.icons8.com/?size=100&id=WC9GOvjtKVuH&format=png&color=000000" alt="mongo-icono" /> <br> MongoDB
+        <p>Manejo MongoDB para bases de datos NoSQL flexibles.</p>
+      </li>
+
+      <li class="Habilidades-T">
+        <img width="48" height="48" src="https://img.icons8.com/?size=100&id=38388&format=png&color=000000" alt="git-icono" /> <br> GitHub
+        <p>Manejo GitHub para control de versiones y trabajo colaborativo.</p>
       </li>
     </ul>
 
