@@ -12,6 +12,7 @@ body {
 	background-color: #1e3042;
 	color: #e0e0e0;
 	overflow-x: hidden;
+	font-size: clamp(12px, 2vw, 16px);
 }
 
 /* === Secciones principales === */
@@ -21,7 +22,7 @@ section {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 60px 20px;
+	padding: clamp(20px, 10vw, 60px) clamp(10px, 5vw, 20px);
 	box-sizing: border-box;
 }
 
@@ -32,7 +33,7 @@ header {
 	z-index: 1000;
 	background: rgba(18, 18, 18, 0.95);
 	backdrop-filter: blur(10px);
-	padding: 0.5% 1%;
+	padding: clamp(5px, 1vw, 15px) clamp(8px, 2vw, 30px);
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 	width: 100%;
 	box-sizing: border-box;
@@ -42,6 +43,7 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	gap: 10px;
 }
 
 /* === Encabezado === */
@@ -50,53 +52,53 @@ header {
 	color: #e0e0e0;
 	text-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 	text-align: center;
-	padding: 2%;
-	font-size: 22px;
+	padding: clamp(15px, 3vw, 30px);
+	font-size: clamp(18px, 4vw, 28px);
 	font-weight: 800;
 	letter-spacing: 1px;
 	border-radius: 18px;
 	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 	width: 100%;
+	max-width: 95vw;
 }
 
 /* === Navegación === */
 ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  padding: 0;
-  margin: 5px 0;
-  flex-wrap: wrap;
-  width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: clamp(8px, 2vw, 15px);
+	padding: 0;
+	margin: clamp(2px, 1vw, 8px) 0;
+	flex-wrap: wrap;
+	width: 100%;
 }
 
 #nav-list {
-  list-style: none;
-  font-size: 12px;
+	list-style: none;
+	font-size: clamp(10px, 1.5vw, 14px);
 }
 
 #nav-list a {
-  color: #e0e0e0;
-  text-decoration: none;
-  transition: color 0.3s;
+	color: #e0e0e0;
+	text-decoration: none;
+	transition: color 0.3s;
 }
 
 #nav-list a:hover {
-  color: #007bff;
+	color: #007bff;
 }
 
 #nav-list li {
-  cursor: pointer;
-  transition: transform 0.3s, color 0.3s;
-  font-weight: 600;
+	cursor: pointer;
+	transition: transform 0.3s, color 0.3s;
+	font-weight: 600;
 }
 
 #nav-list li:hover {
-  transform: translateY(-2px);
-  color: #007bff;
+	transform: translateY(-2px);
+	color: #007bff;
 }
-
 
 /* === Botones idioma y modo === */
 #modo-claro,
@@ -105,10 +107,10 @@ ul {
 	border: none;
 	cursor: pointer;
 	color: #e0e0e0;
-	font-size: 12px;
+	font-size: clamp(9px, 1.2vw, 12px);
 	border-radius: 6px;
-	padding: 6px 10px;
-	margin: 0 3px;
+	padding: clamp(4px, 1vw, 10px) clamp(6px, 1.5vw, 12px);
+	margin: 0 clamp(1px, 0.5vw, 4px);
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 	transition: all 0.3s ease;
 }
@@ -122,8 +124,8 @@ ul {
 /* === Foto de perfil === */
 #foto-perfil {
 	border-radius: 50%;
-	width: 150px;
-	height: 150px;
+	width: clamp(80px, 20vw, 150px);
+	height: clamp(80px, 20vw, 150px);
 	object-fit: cover;
 	border: 3px solid #555;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -137,13 +139,13 @@ ul {
 
 /* === Descripción general === */
 #descripcion-general {
-	font-size: 18px;
+	font-size: clamp(14px, 2vw, 18px);
 	text-align: justify;
 	margin: 10px auto;
-	max-width: 900px;
+	max-width: min(90vw, 900px);
 	line-height: 1.7;
 	background: rgba(30, 30, 30, 0.9);
-	padding: 12px;
+	padding: clamp(10px, 2vw, 15px);
 	border-radius: 12px;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 	border: 1px solid #555;
@@ -190,8 +192,8 @@ ul {
 	background: linear-gradient(90deg, #333, #555);
 	color: #e0e0e0;
 	border: none;
-	padding: 12px 24px;
-	font-size: 16px;
+	padding: clamp(8px, 1.5vw, 12px) clamp(16px, 3vw, 24px);
+	font-size: clamp(13px, 1.8vw, 16px);
 	cursor: pointer;
 	border-radius: 8px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -206,13 +208,13 @@ ul {
 
 /* === Valores === */
 #valores-list {
-	font-size: 16px;
+	font-size: clamp(13px, 1.8vw, 16px);
 	background: rgba(30, 30, 30, 0.9);
 	color: #e0e0e0;
 	margin: 15px;
 	list-style: none;
 	display: inline-block;
-	padding: 15px 20px;
+	padding: clamp(10px, 2vw, 15px) clamp(15px, 2.5vw, 20px);
 	border-radius: 10px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 	border: 1px solid #555;
@@ -225,15 +227,18 @@ ul {
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: center;
-	gap: 20px;
+	gap: clamp(15px, 2vw, 20px);
+	overflow-x: auto;
+	padding: 10px;
 }
 
 .proyecto {
 	background: rgba(30, 30, 30, 0.9);
 	color: #e0e0e0;
 	border-radius: 12px;
-	padding: 20px;
-	width: 240px;
+	padding: clamp(15px, 2vw, 20px);
+	width: clamp(200px, 35vw, 240px);
+	flex-shrink: 0;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 	border: 1px solid #555;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -245,8 +250,8 @@ ul {
 }
 
 .proyecto img {
-	width: 70px;
-	height: 70px;
+	width: clamp(50px, 10vw, 70px);
+	height: clamp(50px, 10vw, 70px);
 	border-radius: 10px;
 }
 
@@ -254,21 +259,23 @@ ul {
 .botones {
 	display: flex;
 	justify-content: center;
-	gap: 15px;
+	gap: clamp(8px, 2vw, 15px);
+	flex-wrap: wrap;
 }
 
 .boton {
 	background: linear-gradient(90deg, #333, #555);
 	color: #e0e0e0;
 	border: none;
-	padding: 10px 16px;
+	padding: clamp(8px, 1.5vw, 10px) clamp(12px, 2vw, 16px);
 	border-radius: 6px;
 	cursor: pointer;
 	text-decoration: none;
 	font-weight: 600;
 	transition: all 0.3s ease;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-	font-size: 14px;
+	font-size: clamp(11px, 1.3vw, 14px);
+	white-space: nowrap;
 }
 
 .boton:hover {
@@ -282,17 +289,17 @@ ul {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 20px;
+	gap: clamp(15px, 3vw, 20px);
 	align-items: stretch;
 }
 
 .Habilidades-T {
-	font-size: 16px;
+	font-size: clamp(13px, 1.8vw, 16px);
 	font-weight: 600;
 	border-radius: 50px;
-	padding: 20px;
-	width: 280px;
-	height: 160px;
+	padding: clamp(15px, 2.5vw, 20px);
+	width: clamp(200px, 40vw, 280px);
+	height: clamp(120px, 20vw, 160px);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 	border: 1px solid #555;
 	display: flex;
@@ -320,13 +327,13 @@ ul {
 }
 
 .contacto-list {
-	font-size: 18px;
+	font-size: clamp(14px, 2vw, 18px);
 	background: rgba(40, 40, 40, 0.9);
 	color: #e0e0e0;
 	margin: 15px;
 	list-style: none;
 	display: inline-block;
-	padding: 15px 25px;
+	padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 25px);
 	border-radius: 10px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 	border: 1px solid #555;
@@ -349,14 +356,15 @@ ul {
 }
 
 .input-text {
-	height: 40px;
+	height: clamp(35px, 5vw, 40px);
 	width: 100%;
 	border-radius: 6px;
 	border: 1px solid #555;
-	font-size: 16px;
-	padding: 8px 12px;
+	font-size: clamp(13px, 1.8vw, 16px);
+	padding: clamp(6px, 1vw, 12px);
 	margin-bottom: 15px;
 	transition: border-color 0.3s ease;
+	box-sizing: border-box;
 }
 
 .input-text:focus {
@@ -368,8 +376,8 @@ ul {
 	background: linear-gradient(90deg, #333, #555);
 	color: #e0e0e0;
 	border: none;
-	padding: 12px 24px;
-	font-size: 16px;
+	padding: clamp(8px, 1.5vw, 12px) clamp(16px, 3vw, 24px);
+	font-size: clamp(13px, 1.8vw, 16px);
 	cursor: pointer;
 	border-radius: 6px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -387,8 +395,8 @@ ul {
 	background: rgba(18, 18, 18, 0.9);
 	color: #e0e0e0;
 	text-align: center;
-	padding: 14px 0;
-	font-size: 14px;
+	padding: clamp(10px, 2vw, 14px) 0;
+	font-size: clamp(11px, 1.5vw, 14px);
 	box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
 }
 /* === Modo Claro === */
