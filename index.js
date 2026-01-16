@@ -3,10 +3,17 @@ document.addEventListener('DOMContentLoaded', function () {
 	const btnCV = document.getElementById('descargar-cv');
 	if (btnCV) {
 		btnCV.addEventListener('click', function () {
-			const cvUrl = './assets/documents/CurrículumCv.pdf';
+			const lang = document.documentElement.lang;
+			const cvUrl =
+				lang === 'en'
+					? './assets/documents/CurrículumEngCv.pdf'
+					: './assets/documents/CurrículumCv.pdf';
 			const link = document.createElement('a');
 			link.href = cvUrl;
-			link.download = 'Curriculum CV Andres Arturo Castro.pdf';
+			link.download =
+				lang === 'en'
+					? 'Curriculum CV Andres Arturo Castro.pdf'
+					: 'Curriculum CV Andres Arturo Castro.pdf';
 			document.body.appendChild(link);
 			link.click();
 			document.body.removeChild(link);
@@ -79,10 +86,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	const idiomaBtn = document.getElementById('cambiar-idioma');
 
 	if (idiomaBtn) {
-		idiomaBtn.addEventListener('click', function () {
-			const file = window.location.pathname.split('/').pop();
-			window.location.href =
-				file === 'index.html' ? 'index-en.html' : 'index.html';
+		idiomaBtn.addEventListener('click', function (e) {
+			e.preventDefault();
+			const file = window.location.pathname.split('/').pop() || 'index.html';
+			const newUrl =
+				file === 'index.html' || file === '' ? 'index-en.html' : 'index.html';
+			window.location.href = newUrl;
 		});
 	}
 });

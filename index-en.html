@@ -11,7 +11,7 @@
   <link
     rel="icon"
     type="image/x-icon"
-    href="assets/image/iconos/icons8-portfolio-48.png"
+    href="./assets/image/iconos/icons.gif"
   />
 </head>
 <header>
@@ -19,8 +19,8 @@
         <li id="nav-list"><a href="#portfolio">Home</a></li>
         <li id="nav-list"><a href="#descripcion">Description</a></li> 
         <li id="nav-list"><a href="#acerca-de-mi">About Me</a></li>
-        <li id="nav-list"><a href="#proyectos">Projects</a></li>
         <li id="nav-list"><a href="#habilidades">Skills</a></li>
+        <li id="nav-list"><a href="#proyectos">Projects</a></li>
         <li id="nav-list"><a href="#contacto">Contact</a></li>
         <br>
         <button id="modo-claro">
@@ -98,53 +98,7 @@
 
   <br><hr><hr><br>
 
-  <section id="proyectos">
-    <h2>Projects</h2>
-
-    <div class="proyecto">
-      <h3>Rick and Morty API</h3>
-      <p>Web application developed with React based on the "Rick and Morty" series, consuming an API to display character information.</p>
-      <img id="img-proyect" src="assets/image/imagenR-a-M.png" alt="project 1" />
-      <div class="botones">
-        <a href="https://rick-and-morty-api-andrew.netlify.app/" target="_blank" class="boton">View Project</a>
-        <a href="https://github.com/elcasti04/rick-and-morty-api" target="_blank" class="boton">Repository</a>
-      </div>
-    </div>
-
-    <div class="proyecto">
-      <h3>Motivational Quotes App</h3>
-      <p>Web application created with React that displays motivational and reflective quotes randomly.</p>
-      <img id="img-proyect" src="assets/image/img-F-app.png" alt="project 2" />
-      <div class="botones">
-        <a href="https://motivational-frases.netlify.app/" target="_blank" class="boton">View Project</a>
-        <a href="https://github.com/elcasti04/frases-app" target="_blank" class="boton">Repository</a>
-      </div>
-    </div>
-
-    <div class="proyecto">
-      <h3>Weather App</h3>
-      <p>Application developed with React that shows weather information for any city in the world by consuming data from an API.</p>
-      <img id="img-proyect" src="assets/image/imgW-app.png" alt="project 3" />
-      <div class="botones">
-        <a href="https://wheaterclima-app.netlify.app/" target="_blank" class="boton">View Project</a>
-        <a href="https://github.com/elcasti04/clima-App" target="_blank" class="boton">Repository</a>
-      </div>
-    </div>
-
-    <div class="proyecto">
-      <h3>Poke-Dex App</h3>
-      <p>Application developed with TypeScript that displays Pokémon and detailed information for each one, consuming data from an API.</p>
-      <img id="img-proyect" src="assets/image/pokemon.jpg" alt="project 4" />
-      <div class="botones">
-        <a href="https://pokedexapi-aa.netlify.app/" target="_blank" class="boton">View Project</a>
-        <a href="https://github.com/elcasti04/pokedex-app" target="_blank" class="boton">Repository</a>
-      </div>
-    </div>
-  </section>
-
-  <br><hr><hr><br>
-
-  <section id="habilidades">
+    <section id="habilidades">
     <h2>Skills</h2>
     <ul>
       <li class="Habilidades-T">
@@ -209,8 +163,74 @@
 
   <br><hr><hr><br>
 
+  <section id="proyectos">
+    <h2>Projects</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(15px, 2vw, 20px); width: 100%;">
+    <div class="proyecto">
+      <h3>Rick and Morty API</h3>
+      <p>Web application developed with React based on the "Rick and Morty" series, consuming an API to display character information.</p>
+      <img id="img-proyect" src="assets/image/imagenR-a-M.png" alt="project 1" />
+      <div class="botones">
+        <a href="https://rick-and-morty-api-andrew.netlify.app/" target="_blank" class="boton">View Project</a>
+        <a href="https://github.com/elcasti04/rick-and-morty-api" target="_blank" class="boton">Repository</a>
+      </div>
+    </div>
+
+    <div class="proyecto">
+      <h3>Motivational Quotes App</h3>
+      <p>Web application created with React that displays motivational and reflective quotes randomly.</p>
+      <img id="img-proyect" src="assets/image/img-F-app.png" alt="project 2" />
+      <div class="botones">
+        <a href="https://motivational-frases.netlify.app/" target="_blank" class="boton">View Project</a>
+        <a href="https://github.com/elcasti04/frases-app" target="_blank" class="boton">Repository</a>
+      </div>
+    </div>
+
+    <div class="proyecto">
+      <h3>Weather App</h3>
+      <p>Application developed with React that shows weather information for any city in the world by consuming data from an API.</p>
+      <img id="img-proyect" src="assets/image/imgW-app.png" alt="project 3" />
+      <div class="botones">
+        <a href="https://wheaterclima-app.netlify.app/" target="_blank" class="boton">View Project</a>
+        <a href="https://github.com/elcasti04/clima-App" target="_blank" class="boton">Repository</a>
+      </div>
+    </div>
+
+    <div class="proyecto">
+      <h3>Poke-Dex App</h3>
+      <p>Application developed with TypeScript that displays Pokémon and detailed information for each one, consuming data from an API.</p>
+      <img id="img-proyect" src="assets/image/pokemon.jpg" alt="project 4" />
+      <div class="botones">
+        <a href="https://pokedexapi-aa.netlify.app/" target="_blank" class="boton">View Project</a>
+        <a href="https://github.com/elcasti04/pokedex-app" target="_blank" class="boton">Repository</a>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <br><hr><hr><br>
+
+
   <section id="contacto">
     <h2>Contact</h2>
+
+        <ul>
+      <li class="contacto-list">
+        <a href="mailto:andresppemma@gmail.com" target="_blank">
+          <img width="50" height="50" src="https://img.icons8.com/ios/50/mail.png" alt="mail" />
+        </a>
+      </li>
+      <li class="contacto-list">
+        <a href="tel:+573127743932" target="_blank">
+          <img width="50" height="50" src="https://img.icons8.com/ios/50/phone--v1.png" alt="phone" />
+        </a>
+      </li>
+      <li class="contacto-list">
+        <a href="https://www.linkedin.com/in/andres-castro-b64271255/" target="_blank">
+          <img width="50" height="50" src="https://img.icons8.com/ios/50/linkedin.png" alt="linkedin" />
+        </a>
+      </li>
+    </ul>
 
     <div id="formulario-contacto">
       <h2 class="contacto-titulo">Get in touch with me</h2>
