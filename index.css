@@ -6,10 +6,10 @@ html {
 
 body {
 	font-family: 'Times New Roman', serif;
+	background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 	margin: 0;
 	padding: 0;
 	text-align: center;
-	background-color: #1e3042;
 	color: #e0e0e0;
 	overflow-x: hidden;
 	font-size: clamp(12px, 2vw, 16px);
@@ -17,13 +17,15 @@ body {
 
 /* === Secciones principales === */
 section {
-	min-height: 100vh;
+	height: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding: clamp(20px, 10vw, 60px) clamp(10px, 5vw, 20px);
 	box-sizing: border-box;
+	background-color: rgba(255, 255, 255, 0.1);
+	overflow: hidden;
 }
 
 /* === Header flotante === */
@@ -31,7 +33,7 @@ header {
 	position: sticky;
 	top: 0;
 	z-index: 1000;
-	background: rgba(18, 18, 18, 0.95);
+	
 	backdrop-filter: blur(10px);
 	padding: clamp(5px, 1vw, 15px) clamp(8px, 2vw, 30px);
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -48,19 +50,35 @@ header {
 
 /* === Encabezado === */
 #portafolio {
-	background: linear-gradient(120deg, #1a1a1a, #2c2c2c);
-	color: #e0e0e0;
-	text-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
-	text-align: center;
-	padding: clamp(15px, 3vw, 30px);
-	font-size: clamp(18px, 4vw, 28px);
-	font-weight: 800;
-	letter-spacing: 1px;
-	border-radius: 18px;
-	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-	width: 100%;
-	max-width: 95vw;
+  position: relative;
+  color: #000000;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding: clamp(15px, 3vw, 30px);
+  font-size: clamp(18px, 4vw, 28px);
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 95vw;
+  overflow: hidden; /* evita que el pseudo-elemento se desborde */
 }
+
+#portafolio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://plus.unsplash.com/premium_photo-1685086785054-d047cdc0e525?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7; 
+  z-index: -1; 
+}
+
 
 /* === Navegación === */
 ul {
@@ -255,6 +273,7 @@ ul {
 	gap: clamp(15px, 2vw, 20px);
 	padding: 10px;
 	width: 100%;
+	
 }
 
 #proyectos > h2 {
@@ -276,6 +295,7 @@ ul {
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 	border: 1px solid #555;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	box-sizing: border-box;
 }
 
 .proyecto:hover {
@@ -288,6 +308,7 @@ ul {
 	height: clamp(50px, 10vw, 70px);
 	border-radius: 10px;
 	margin: 10px auto;
+	box-sizing: border-box;
 }
 
 /* Botones de proyectos */
