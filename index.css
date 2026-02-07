@@ -469,8 +469,11 @@ ul {
 }
 
 .modo-claro #portafolio {
-	background: linear-gradient(120deg, #007bff, #0056b3);
-	color: #fff;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1)), url('./assets/image/codigo.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: #1e3042;
 }
 
 .modo-claro #modo-claro,
