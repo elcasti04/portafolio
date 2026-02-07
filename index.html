@@ -15,6 +15,13 @@
     type="image/x-icon"
     href="./assets/image/iconos/icons.gif"
   />
+  <!-- EmailJS v4 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init({ publicKey: 'jxVCfyca7qoNr7htn' });
+  })();
+</script>
 </head>
 <header>
       <ul>
@@ -257,12 +264,12 @@
       </li>
     </ul>
 
-    <div id="formulario-contacto">
+    <form id="contact-form">
       <h2 class="contacto-titulo">Ponte en contacto conmigo</h2>
 
       <div>
         <label><strong>Nombre:</strong></label><br>
-        <input id="nombre" class="input-text" type="text" placeholder="Tu nombre" />
+        <input id="name" class="input-text" type="text" placeholder="Tu nombre" />
       </div>
 
       <div>
@@ -272,17 +279,17 @@
 
       <div>
         <label><strong>Mensaje:</strong></label><br>
-        <textarea id="mensaje" class="input-text" placeholder="Pon tu correo en el mensaje también"></textarea>
+        <textarea id="message" class="input-text" placeholder="Pon tu correo en el mensaje también"></textarea>
       </div>
 
       <div>
-        <button id="enviar-mensaje">Enviar</button>
+        <button id="enviar-mensaje" type="submit">Enviar</button>
         <dialog id="dialogo-mensaje">
           Pronto responderemos su mensaje.
-          <button id="cerrar-dialogo">Cerrar</button>
+          <button id="cerrar-dialogo" type="button">Cerrar</button>
         </dialog>
       </div>
-    </div>
+    </form>
 
 
   </section>
@@ -291,8 +298,7 @@
     <p>&copy; 2025 Andrés Arturo Castro Orozco | Todos los derechos reservados.</p>
   </footer>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-  <script src="index.js" defer></script>
+<!-- Carga del JS principal al final del body -->
+<script src="index.js"></script>
 </body>
 </html>

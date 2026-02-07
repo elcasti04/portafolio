@@ -21,51 +21,54 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	/* -------------------- FORMULARIO -------------------- */
-	const enviarMensajeBtn = document.getElementById('enviar-mensaje');
-	const dialogo = document.getElementById('dialogo-mensaje');
+	const formDom = document.getElementById('contact-form');
+	const dialog = document.getElementById('dialogo-mensaje');
 	const cerrarDialogoBtn = document.getElementById('cerrar-dialogo');
 
-	function infoInput(e) {
+	function getInputsData(e) {
 		e.preventDefault();
 
-		const nombre = document.getElementById('nombre').value.trim();
-		const email = document.getElementById('email').value.trim();
-		const mensaje = document.getElementById('mensaje').value.trim();
+		const infoInputs = {
+			name: document.getElementById('name')?.value?.trim(),
+			email: document.getElementById('email')?.value?.trim(),
+			message: document.getElementById('message')?.value?.trim(),
+		};
 
-		if (nombre && email && mensaje) {
-			enviarCorreo(nombre, email, mensaje);
-			dialogo.showModal();
+		if (infoInputs.name && infoInputs.email && infoInputs.message) {
+			emailjs
+				.send('service_4l0rdvp', 'template_kdtysec', infoInputs)
+				.then(
+					(response) => {
+						console.log('SUCCESS!', response.status, response.text);
+						if (typeof formDom?.reset === 'function') formDom.reset();
+						if (dialog && typeof dialog.showModal === 'function') dialog.showModal();
+					},
+					(error) => {
+						console.error('FAILED...', error);
+						if (dialog && typeof dialog.showModal === 'function') {
+							dialog.textContent = 'Error al enviar. Inténtalo nuevamente.';
+							dialog.showModal();
+						}
+					}
+				);
 		} else {
-			alert('Por favor complete todos los campos.');
+			console.warn('Por favor completa todos los campos.');
+			if (dialog && typeof dialog.showModal === 'function') {
+				dialog.textContent = 'Por favor completa todos los campos.';
+				dialog.showModal();
+			}
 		}
 	}
 
-	if (enviarMensajeBtn) enviarMensajeBtn.addEventListener('click', infoInput);
-	if (cerrarDialogoBtn)
-		cerrarDialogoBtn.addEventListener('click', () => dialogo.close());
+	function bindForm() {
+		if (!formDom) return;
+		formDom.removeEventListener('submit', getInputsData);
+		formDom.addEventListener('submit', getInputsData);
+	}
 
-	/* -------------------- ENVIAR CORREO CON EMAILJS -------------------- */
-	function enviarCorreo(nombre, email, mensaje) {
-		emailjs.init('jxVCfyca7qoNr7htn');
-
-		emailjs
-			.send('service_4l0rdvp', 'template_kdtysec', {
-				from_name: nombre,
-				from_email: email,
-				message: mensaje,
-			})
-			.then(
-				function (response) {
-					console.log('Correo enviado exitosamente');
-					document.getElementById('nombre').value = '';
-					document.getElementById('email').value = '';
-					document.getElementById('mensaje').value = '';
-				},
-				function (error) {
-					console.error('Error al enviar correo', error);
-					alert('Hubo un problema al enviar el mensaje, intenta más tarde.');
-				},
-			);
+	bindForm();
+	if (cerrarDialogoBtn && dialog) {
+		cerrarDialogoBtn.addEventListener('click', () => dialog.close());
 	}
 
 	/* -------------------- MODO CLARO -------------------- */
