@@ -230,7 +230,10 @@ body {
 		margin-right: auto;
 	}
 }
-
+#img-proyect{
+	height: 280px;
+	width: 100%;
+}
 .navbar-style {
 	position: sticky;
   max-height: 70px;

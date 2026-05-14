@@ -1,3 +1,4 @@
+import './page.css/acercademi.css'
 export const AcercaDeMi = () => {
 
     function descargar () {

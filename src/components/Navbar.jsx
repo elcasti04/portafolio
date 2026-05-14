@@ -1,8 +1,7 @@
-import { useNavigate } from 'react-router-dom'
 export const NavBar = () => {
 
 
-	const navigate = useNavigate()
+	
 
 	function cambiarModo () {
 		document.body.classList.toggle('light-mode')

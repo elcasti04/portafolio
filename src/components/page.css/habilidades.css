@@ -1,0 +1,105 @@
+/* ===== CONTENEDOR ===== */
+#habilidades .habilidades {
+  padding: 4rem 1.5rem;
+}
+
+/* ===== TÍTULO ===== */
+#habilidades h2 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 700;
+  color: var(--heading);
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+/* ===== SUBTÍTULOS ===== */
+#habilidades h3 {
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* ===== GRID LISTA ===== */
+#habilidades ul {
+  padding: 0;
+}
+
+/* ===== CARDS ===== */
+#habilidades .card {
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(8, 13, 24, 0.9);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+  transition: all 0.25s ease;
+  text-align: center;
+}
+
+/* ✨ HOVER PRO */
+#habilidades .card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== ICONOS ===== */
+#habilidades .card img {
+  padding: 0.4rem;
+  border-radius: 0.6rem;
+  background: #fff;
+}
+
+/* ===== TITULO CARD ===== */
+#habilidades .card-title {
+  color: var(--gold);
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+/* ===== TEXTO ===== */
+#habilidades .card-text {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* ===== HABILIDADES BLANDAS ===== */
+#habilidades .hb {
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--gold);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* hover suave */
+#habilidades .hb:hover {
+  background: rgba(212, 175, 55, 0.18);
+  transform: translateY(-2px);
+}
+
+/* ===== HR ===== */
+#habilidades hr {
+  width: 80px;
+  height: 3px;
+  margin: 3rem auto 0;
+  border: none;
+  background: linear-gradient(
+    90deg,
+    var(--gold),
+    transparent
+  );
+  opacity: 0.8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  #habilidades .card {
+    padding: 1rem;
+  }
+
+  #habilidades .card-text {
+    font-size: 0.8rem;
+  }
+}

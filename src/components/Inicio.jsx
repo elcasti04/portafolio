@@ -1,3 +1,4 @@
+import './page.css/inicio.css'
 export const Inicio = () => {
 	return (
 		<div id="inicio">
@@ -17,8 +18,8 @@ export const Inicio = () => {
 						<div className="d-flex justify-content-center mb-3">
 							<img
 								className="img-fluid rounded-circle shadow"
-								style={{ maxWidth: '220px' }}
-								src="../src/assets/image/perfil2.jpg"
+								style={{ maxWidth: '350px' }}
+								src="../../public/img/perfil2.jpg"
 								alt="foto de perfil"
 							/>
 						</div>

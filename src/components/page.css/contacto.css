@@ -1,0 +1,116 @@
+/* ===== CONTENEDOR ===== */
+#contacto .contacto-section {
+  padding: 4rem 1.5rem;
+}
+
+/* ===== TÍTULO ===== */
+#contacto h2 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 700;
+  color: var(--heading);
+  letter-spacing: -0.02em;
+}
+
+/* ===== BOTONES DE CONTACTO (EMAIL, TEL, LINKEDIN) ===== */
+#contacto .btn-outline-primary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--gold);
+  background: transparent;
+  transition: all 0.25s ease;
+}
+
+/* hover */
+#contacto .btn-outline-primary:hover {
+  background: rgba(212, 175, 55, 0.12);
+  transform: translateY(-2px);
+}
+
+/* ===== FORMULARIO ===== */
+#contacto form {
+  background: rgba(8, 13, 24, 0.92);
+  border-radius: 1.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* ===== INPUTS ===== */
+#contacto .form-control {
+  background: rgba(5, 8, 18, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  border-radius: 0.6rem;
+  padding: 0.6rem 0.8rem;
+}
+
+/* focus */
+#contacto .form-control:focus {
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.15);
+  background: rgba(7, 11, 18, 0.95);
+}
+
+/* ===== LABELS ===== */
+#contacto .form-label strong {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* ===== BOTÓN ENVIAR ===== */
+#contacto .btn-primary {
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0f2a5a, #102b65);
+  border: none;
+  color: var(--gold);
+  font-weight: 500;
+  box-shadow: 0 10px 25px rgba(16, 43, 101, 0.35);
+  transition: all 0.25s ease;
+}
+
+/* hover */
+#contacto .btn-primary:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #2b4bad, #0e2b63);
+  color: #fff;
+}
+
+/* ===== MODAL ===== */
+#contacto .modal-content {
+  background: rgba(6, 11, 22, 0.98);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+#contacto .modal-title {
+  color: var(--gold);
+}
+
+#contacto .modal-body {
+  color: var(--text-muted);
+}
+
+#contacto .btn-secondary {
+  border-radius: 999px;
+}
+
+/* ===== ICONOS ===== */
+#contacto img {
+  filter: brightness(0.9);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  #contacto form {
+    padding: 1.5rem !important;
+  }
+
+  #contacto .btn-outline-primary {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,112 @@
+/* ===== CONTENEDOR ===== */
+#proyectos .proyectos {
+	padding: 4rem 1.5rem;
+}
+
+/* ===== TÍTULO ===== */
+#proyectos h2 {
+	font-size: clamp(2rem, 3vw, 2.6rem);
+	font-weight: 700;
+	color: var(--heading);
+	margin-bottom: 1.5rem;
+	letter-spacing: -0.02em;
+}
+
+/* ===== DESCRIPCIÓN ===== */
+#proyectos p {
+	color: white;
+	max-width: 700px;
+	margin: 0 auto;
+	line-height: 1.7;
+	font-size: 0.95rem;
+}
+
+/* ===== CARD PRINCIPAL ===== */
+#proyectos .card {
+	background: rgba(8, 13, 24, 0.92);
+	border-radius: 1.5rem;
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	padding: 1.5rem;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+	transition: all 0.3s ease;
+}
+
+/* ✨ HOVER SUAVE */
+#proyectos .card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+}
+
+/* ===== IMAGEN ===== */
+#proyectos #img-proyect {
+	height: 320px;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 1rem;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== TITULO PROYECTO ===== */
+#proyectos .card-title {
+	color: var(--gold);
+	margin-top: 0.5rem;
+	font-size: 1.2rem;
+}
+
+/* ===== TEXTO ===== */
+#proyectos .card-text {
+	color: #fff;
+	font-size: 1rem;
+}
+
+/* ===== BOTONES ===== */
+#proyectos .btn {
+	border-radius: 999px;
+	font-weight: 500;
+}
+
+/* efecto hover botones */
+#proyectos .btn:hover {
+	transform: translateY(-2px);
+}
+
+/* ===== CONTENEDOR BOTONES ===== */
+#proyectos .d-flex.gap-2 {
+	margin-top: 0.8rem;
+}
+
+/* ===== BOTONES NAVEGACIÓN ===== */
+#proyectos .btn-dark {
+	background: rgba(20, 25, 40, 0.9);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#proyectos .btn-dark:hover {
+	background: #0e2b63;
+}
+
+/* ===== CONTENEDOR FLECHAS ===== */
+#proyectos .d-flex.gap-4 {
+	margin-top: 1rem;
+}
+
+/* ===== HR ===== */
+#proyectos hr {
+	width: 80px;
+	height: 3px;
+	margin: 3rem auto 0;
+	border: none;
+	background: linear-gradient(90deg, var(--gold), transparent);
+	opacity: 0.8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+	#proyectos #img-proyect {
+		height: 200px;
+	}
+
+	#proyectos .card {
+		padding: 1rem;
+	}
+}

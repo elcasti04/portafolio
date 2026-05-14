@@ -1,3 +1,4 @@
+import './page.css/habilidades.css'
 export const Habilidades = () => {
 	return (
 		<>
@@ -41,7 +42,7 @@ export const Habilidades = () => {
 						</li>
 						<li className="card col-12 col-md-6 col-lg-2 justify-content-center align-items-center">
 							<img
-								src="../src/assets/image/iconos/icons8-react-native.gif"
+								src="../../public/img/iconos/icons8-react-native.gif"
 								alt="react-icono"
 								className="mb-3"
 								style={{backgroundColor:'white'}}
@@ -141,7 +142,7 @@ export const Habilidades = () => {
 					</ul>
 				</div>
 				<div className="">
-					<h3 className="text-center">Habulidades blandas</h3>
+					<h3 className="text-center">Habilidades blandas</h3>
 					<ul className="row col-12 list-unstiled text-center d-flex flex-wrap justify-content-center gap-2">
 						<li className="hb border col-6 col-md-4 col-lg-4">
 							Comunicación efectiva

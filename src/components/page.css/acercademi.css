@@ -1,0 +1,94 @@
+/* ===== CONTENEDOR PRINCIPAL ===== */
+#acerca-de-mi .acerca-de-mi {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+/* ===== TÍTULO ===== */
+#acerca-de-mi h2 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 700;
+  color: var(--heading);
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+/* ===== FRASE ===== */
+#acerca-de-mi .valores-list.fst-italic {
+  font-size: 1.1rem;
+  color: var(--gold);
+  opacity: 0.9;
+}
+
+/* ===== BOTÓN CV ===== */
+#descargar-cv {
+  margin-top: 1.5rem;
+  background: linear-gradient(135deg, #0f2a5a, #102b65);
+  border: none;
+  color: var(--gold);
+  border-radius: 999px;
+  padding: 0.6rem 1.8rem;
+  font-weight: 500;
+  box-shadow: 0 10px 25px rgba(16, 43, 101, 0.35);
+  transition: all 0.25s ease;
+}
+
+#descargar-cv:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #2b4bad, #0e2b63);
+  color: #fff;
+}
+
+/* ===== SUBTÍTULOS ===== */
+#acerca-de-mi h4 {
+  margin-top: 1.5rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* ===== TEXTO ===== */
+#acerca-de-mi p,
+#acerca-de-mi li {
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* ===== LISTA ===== */
+#acerca-de-mi ul {
+  padding: 0;
+}
+
+/* ===== TARJETA VISUAL (EFECTO SUAVE) ===== */
+#acerca-de-mi .col-lg-6 {
+  padding: 1.5rem;
+}
+
+/* ===== HR ===== */
+#acerca-de-mi hr {
+  width: 80px;
+  height: 3px;
+  margin: 3rem auto 0;
+  border: none;
+  background: linear-gradient(
+    90deg,
+    var(--gold),
+    transparent
+  );
+  opacity: 0.8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  #acerca-de-mi h2 {
+    font-size: 1.8rem;
+  }
+
+  #acerca-de-mi h4 {
+    margin-top: 1rem;
+  }
+
+  #descargar-cv {
+    width: 100%;
+  }
+}

@@ -1,205 +1,378 @@
+import './page.css/proyectos.css'
+import { useState } from 'react';
+
 export const Proyectos = () => {
+	const [mostrar, setMostrar] = useState(1);
+	function cambiar () {
+		if(mostrar < 11){
+			setTimeout(() => {
+			setMostrar(mostrar + 1)
+			}, 2000)
+		}else if(mostrar == 11){
+			setMostrar(1)
+		}
+	}
+	
 	return (
 		<>
 			<div id="proyectos">
 				<main
-			
-				style={{ miHeight: '95vh' }}
-				className="proyectos section-block container-fluid row col-12 p-4"
-			>
-				<h2 className="text-center">Proyectos</h2>
-				<div>
-					<p className="text-center">
-						En esta sección se mostrarán algunos de los proyectos en los que he
-						trabajado, tanto personales como académicos. Estos proyectos
-						reflejan mi pasión por la programación y mi compromiso con el
-						aprendizaje continuo. A través de estos proyectos, he podido aplicar
-						mis habilidades técnicas y resolver problemas reales, lo que me ha
-						permitido crecer como desarrollador.
-					</p>
+					style={{ miHeight: '95vh' }}
+					className="proyectos section-block container-fluid row col-12 p-4"
+				>
+					<h2 className="text-center">Proyectos</h2>
+					<div>
+						<p className="text-center">
+							En esta sección se mostrarán algunos de los proyectos en los que
+							he trabajado, tanto personales como académicos. Estos proyectos
+							reflejan mi pasión por la programación y mi compromiso con el
+							aprendizaje continuo. A través de estos proyectos, he podido
+							aplicar mis habilidades técnicas y resolver problemas reales, lo
+							que me ha permitido crecer como desarrollador.
+						</p>
+						<hr />
+						<div
+							style={{ height: 'auto', color:'white' }}
+							className="card col-11 col-md-8 col-lg-6 mx-auto d-flex justify-content-center align-items-center"
+						>
+							{mostrar === 1 && (
+								<div className="">
+									<img
+										id="img-proyect"
+										src="../../public/img/imagenR-a-M.png"
+										alt="proyecto 1"
+										className="img-fluid rounded-3 mb-3"
+									/>
+									<h5 className="card-title fw-bold">Rick and Morty API</h5>
+									<p className="card-text small">
+										Aplicación web desarrollada con React, consumiendo el API de
+										Rick and Morty.
+									</p>
+									<div className="d-flex justify-content-center gap-2 mt-2">
+										<a
+											href="https://rick-and-morty-api-andrew.netlify.app/"
+											target="_blank"
+											className="btn btn-primary btn-sm rounded-pill px-3"
+										>
+											Ver proyecto
+										</a>
+										<a
+											href="https://github.com/elcasti04/rick-and-morty-api"
+											target="_blank"
+											className="btn btn-outline-primary btn-sm rounded-pill px-3"
+										>
+											Repo
+										</a>
+									</div>
+								</div>
+							)}
+
+							{mostrar === 2 && (
+								<div className="">
+									<img
+										id="img-proyect"
+										src="../../public/img/img-F-app.png"
+										alt="proyecto 2"
+										className="img-fluid rounded-3 mb-3"
+									/>
+									<h5 className="card-title fw-bold">
+										Frases motivacionales APP
+									</h5>
+									<p className="card-text small">
+										Aplicación web creada con React que muestra frases
+										motivacionales.
+									</p>
+									<div className="d-flex justify-content-center gap-2 mt-2">
+										<a
+											href="https://motivational-frases.netlify.app/"
+											target="_blank"
+											className="btn btn-primary btn-sm rounded-pill px-3"
+										>
+											Ver proyecto
+										</a>
+										<a
+											href="https://github.com/elcasti04/frases-app"
+											target="_blank"
+											className="btn btn-outline-primary btn-sm rounded-pill px-3"
+										>
+											Repo
+										</a>
+									</div>
+								</div>
+							)}
+
+							{mostrar === 3 && (
+								<div className="text-center">
+									<img
+										id="img-proyect"
+										src="../../public/img/imgW-app.png"
+										alt="proyecto 3"
+										className="img-fluid rounded-3 mb-3 shadow-sm"
+									/>
+									<h5 className="card-title fw-bold">Weather APP</h5>
+									<p className="card-text small">
+										Aplicación del clima con información de cualquier ciudad.
+									</p>
+									<div className="d-flex justify-content-center gap-2 mt-2">
+										<a
+											href="https://wheaterclima-app.netlify.app/"
+											target="_blank"
+											className="btn btn-primary btn-sm rounded-pill px-3"
+										>
+											Ver proyecto
+										</a>
+										<a
+											href="https://github.com/elcasti04/clima-App"
+											target="_blank"
+											className="btn btn-outline-primary btn-sm rounded-pill px-3"
+										>
+											Repo
+										</a>
+									</div>
+								</div>
+							)}
+
+							{mostrar === 4 && (
+								<div className="text-center">
+									<img
+										id="img-proyect"
+										src="../../public/img/pokemon.jpg"
+										alt="proyecto 4"
+										className="img-fluid rounded-3 mb-3 shadow-sm"
+									/>
+									<h5 className="card-title fw-bold">Poke-Dex APP</h5>
+									<p className="card-text small">
+										App en TypeScript con información detallada de Pokémon.
+									</p>
+									<div className="d-flex justify-content-center gap-2 mt-2">
+										<a
+											href="https://pokedexapi-aa.netlify.app/"
+											target="_blank"
+											className="btn btn-primary btn-sm rounded-pill px-3"
+										>
+											Ver proyecto
+										</a>
+										<a
+											href="https://github.com/elcasti04/pokedex-app"
+											target="_blank"
+											className="btn btn-outline-primary btn-sm rounded-pill px-3"
+										>
+											Repo
+										</a>
+									</div>
+								</div>
+							)}
+
+							{mostrar === 5 && (
+								<div className="text-center">
+									<img
+										id="img-proyect"
+										src="../../public/img/latam45.png"
+										alt="proyecto 5"
+										className="img-fluid rounded-3 mb-3 shadow-sm"
+									/>
+									<h5 className="card-title fw-bold">Latam 45 APP</h5>
+									<p className="card-text small">
+										Plataforma de monitoreo financiero en tiempo real
+										(simulado).
+									</p>
+									<div className="d-flex justify-content-center gap-2 mt-2">
+										<a
+											href="https://latam45.netlify.app/"
+											target="_blank"
+											className="btn btn-primary btn-sm rounded-pill px-3"
+										>
+											Ver proyecto
+										</a>
+										<a
+											href="https://github.com/elcasti04/Latam45"
+											target="_blank"
+											className="btn btn-outline-primary btn-sm rounded-pill px-3"
+										>
+											Repo
+										</a>
+									</div>
+								</div>
+							)}
+
+							{mostrar === 6 && (
+								<div className="text-center">
+									<img
+										id="img-proyect"
+										src="../../public/img/concesionario.png"
+										alt="proyecto 6"
+										className="img-fluid rounded-3 mb-3 shadow-sm"
+									/>
+									<h5 className="card-title fw-bold">Concesionario</h5>
+									<p className="card-text small">
+										Proyecto full stack con Node.js, PostgreSQL y React.
+									</p>
+									<div className="d-flex justify-content-center gap-2 mt-2">
+										<a
+											href="https://andres-concesionario.netlify.app/"
+											target="_blank"
+											className="btn btn-primary btn-sm rounded-pill px-3"
+										>
+											Ver proyecto
+										</a>
+										<a
+											href="https://github.com/elcasti04/concesionarioF"
+											target="_blank"
+											className="btn btn-outline-primary btn-sm rounded-pill px-3"
+										>
+											Repo
+										</a>
+									</div>
+								</div>
+							)}
+
+							{mostrar === 7 &&( 
+							<div>
+								<img
+										id="img-proyect"
+										src="../../public/img/pNotas.png"
+										alt="proyecto 7"
+										className="img-fluid rounded-3 mb-3 shadow-sm"
+									/>
+									<h5 className="card-title fw-bold">Cuaderno de Notas</h5>
+									<p className="card-text small">
+										Proyecto full stack con Node.js, PostgreSQL y React + typeScript.
+									</p>
+									<div className="d-flex justify-content-center gap-2 mt-2">
+										<a
+											href="https://andres-notas.netlify.app/"
+											target="_blank"
+											className="btn btn-primary btn-sm rounded-pill px-3"
+										>
+											Ver proyecto
+										</a>
+										<a
+											href="https://github.com/elcasti04/notas"
+											target="_blank"
+											className="btn btn-outline-primary btn-sm rounded-pill px-3"
+										>
+											Repo
+										</a>
+									</div>
+							</div>)}
+							{mostrar === 8 &&( 
+							<div>
+								<img
+										id="img-proyect"
+										src="../../public/img/pAndresgpt.png"
+										alt="proyecto 7"
+										className="img-fluid rounded-3 mb-3 shadow-sm"
+									/>
+									<h5 className="card-title fw-bold">AndresGPT</h5>
+									<p className="card-text small">
+										Proyecto Simulacion de IA utilizando Gemini.
+									</p>
+									<div className="d-flex justify-content-center gap-2 mt-2">
+										<a
+											href="https://andreschatbot.netlify.app/"
+											target="_blank"
+											className="btn btn-primary btn-sm rounded-pill px-3"
+										>
+											Ver proyecto
+										</a>
+										<a
+											href="https://github.com/elcasti04/AndresChat2"
+											target="_blank"
+											className="btn btn-outline-primary btn-sm rounded-pill px-3"
+										>
+											Repo
+										</a>
+									</div>
+							</div>)}
+							{mostrar === 9 &&( 
+							<div>
+								<img
+										id="img-proyect"
+										src="../../public/img/pMilo.png"
+										alt="proyecto 7"
+										className="img-fluid rounded-3 mb-3 shadow-sm"
+									/>
+									<h5 className="card-title fw-bold">Milo-j-Music</h5>
+									<p className="card-text small">
+										Proyecto para escuchar y visualizar la musica del cantante milo j.
+									</p>
+									<div className="d-flex justify-content-center gap-2 mt-2">
+										<a
+											href="https://milo-j-music.netlify.app/"
+											target="_blank"
+											className="btn btn-primary btn-sm rounded-pill px-3"
+										>
+											Ver proyecto
+										</a>
+										<a
+											href="https://github.com/elcasti04/MiloMusic"
+											target="_blank"
+											className="btn btn-outline-primary btn-sm rounded-pill px-3"
+										>
+											Repo
+										</a>
+									</div>
+							</div>)}
+							{mostrar === 10 &&( 
+							<div>
+								<img
+										id="img-proyect"
+										src="../../public/img/pIreth.png"
+										alt="proyecto 7"
+										className="img-fluid rounded-3 mb-3 shadow-sm"
+									/>
+									<h5 className="card-title fw-bold">Portafolio</h5>
+									<p className="card-text small">
+										Proyecto en vanilla de un portafolio online.
+									</p>
+									<div className="d-flex justify-content-center gap-2 mt-2">
+										<a
+											href="https://portafolioireth.netlify.app/"
+											target="_blank"
+											className="btn btn-primary btn-sm rounded-pill px-3"
+										>
+											Ver proyecto
+										</a>
+										<a
+											href="https://github.com/elcasti04/portafolioIreth"
+											target="_blank"
+											className="btn btn-outline-primary btn-sm rounded-pill px-3"
+										>
+											Repo
+										</a>
+									</div>
+							</div>)}
+							
+							{/*Botones */}
+							<div className='d-flex gap-4'>
+								<button
+								className="btn btn-dark mt-4 px-4 rounded-pill"
+								onClick={() => {
+									if (mostrar >= mostrar) {
+										setMostrar(mostrar - 1);
+									}
+								}}
+							>
+								Anterior
+							</button>
+
+							<button
+								className="btn btn-dark mt-4 px-4 rounded-pill"
+								onClick={() => {
+									if (mostrar <= mostrar) {
+										setMostrar(mostrar + 1);
+									}
+								}}
+							>
+								Siguiente
+							</button>
+						{cambiar()}
+
+							</div>
+						</div>
+					</div>
 					<hr />
-					<ul className="list-unstiled text-center d-flex flex-wrap justify-content-center gap-2">
-						<li className="card col-12 col-md-6 col-lg-3 justify-content-center align-items-center">
-							<img
-								id="img-proyect"
-								src="../src/../src/assets/image/imagenR-a-M.png"
-								alt="proyecto 1"
-								className="img-top"
-							/>
-							<h5 className="card-title">Rick and Morty API</h5>
-							<p className="card-text">
-								Aplicación web desarrollada con React, consumiendo el API de
-								Rick and Morty.
-							</p>
-							<div className="d-flex justify-content-between">
-								<a
-									href="https://rick-and-morty-api-andrew.netlify.app/"
-									target="_blank"
-									className="btn btn-primary"
-								>
-									Ver proyecto
-								</a>
-								<a
-									href="https://github.com/elcasti04/rick-and-morty-api"
-									target="_blank"
-									className="btn btn-outline-primary"
-								>
-									Repositorio
-								</a>
-							</div>
-						</li>
-						<li className="card col-12 col-md-6 col-lg-3 justify-content-center align-items-center">
-							<img
-								id="img-proyect"
-								src="../src/../src/assets/image/img-F-app.png"
-								alt="proyecto 2"
-								className="img-top"
-							/>
-							<h5 className="card-title">Frases motivacionales APP</h5>
-							<p className="card-text">
-								Aplicación web creada con React que muestra frases
-								motivacionales y de reflexión de manera aleatoria.
-							</p>
-							<div className="d-flex justify-content-between">
-								<a
-									href="https://motivational-frases.netlify.app/"
-									target="_blank"
-									className="btn btn-primary"
-								>
-									Ver proyecto
-								</a>
-								<a
-									href="https://github.com/elcasti04/frases-app"
-									target="_blank"
-									className="btn btn-outline-primary"
-								>
-									Repositorio
-								</a>
-							</div>
-						</li>
-						<li className="card col-12 col-md-6 col-lg-3 justify-content-center align-items-center">
-							<img
-								id="img-proyect"
-								src="../src/assets/image/imgW-app.png"
-								alt="proyecto 3"
-								className="img-top"
-							/>
-							<h5 className="card-title">Wheater APP</h5>
-							<p className="card-text">
-								Aplicación desarrollada con React que muestra información del
-								clima de cualquier ciudad del mundo.
-							</p>
-							<div className="d-flex justify-content-between">
-								<a
-									href="https://wheaterclima-app.netlify.app/"
-									target="_blank"
-									className="btn btn-primary"
-								>
-									Ver proyecto
-								</a>
-								<a
-									href="https://github.com/elcasti04/clima-App"
-									target="_blank"
-									className="btn btn-outline-primary"
-								>
-									Repositorio
-								</a>
-							</div>
-						</li>
-						<li className="card col-12 col-md-6 col-lg-3 justify-content-center align-items-center">
-							<img
-								id="img-proyect"
-								src="../src/assets/image/pokemon.jpg"
-								alt="proyecto 4"
-								className="img-top"
-							/>
-							<h5 className="card-title">Poke-Dex APP</h5>
-							<p className="card-text">
-								Aplicación desarrollada con TypeScript que muestra pokémones e
-								información detallada de cada uno, consumiendo datos desde una
-								API.
-							</p>
-							<div className="d-flex justify-content-between">
-								<a
-									href="https://pokedexapi-aa.netlify.app/"
-									target="_blank"
-									className="btn btn-primary"
-								>
-									Ver proyecto
-								</a>
-								<a
-									href="https://github.com/elcasti04/pokedex-app"
-									target="_blank"
-									className="btn btn-outline-primary"
-								>
-									Repositorio
-								</a>
-							</div>
-						</li>
-						<li className="card col-12 col-md-6 col-lg-3 justify-content-center align-items-center">
-							<img
-								id="img-proyect"
-								src="../src/assets/image/latam45.png"
-								alt="proyecto 5"
-								className="img-top"
-							/>
-							<h5 className="card-title">Latam 45 APP</h5>
-							<p className="card-text">
-								Página web de monitoreo de mercado financiero para el índice
-								LATAM 45. La aplicación muestra en tiempo real (simulado) el
-								comportamiento de 45 activos clave de América Latina
-							</p>
-							<div className="d-flex justify-content-between">
-								<a
-									href="https://latam45.netlify.app/"
-									target="_blank"
-									className="btn btn-primary"
-								>
-									Ver proyecto
-								</a>
-								<a
-									href="https://github.com/elcasti04/Latam45"
-									target="_blank"
-									className="btn btn-outline-primary"
-								>
-									Repositorio
-								</a>
-							</div>
-						</li>
-						<li className="card col-12 col-md-6 col-lg-3 justify-content-center align-items-center">
-							<img
-								id="img-proyect"
-								src="../src/assets/image/concesionario.png"
-								alt="proyecto 7"
-								className="img-top"
-							/>
-							<h5 className="card-title">Concesionario</h5>
-							<p className="card-text">
-								Proyecto full stack desarrollado con nodeJs, express, postgreSql
-								para el backend y React y typeScript para el frontend de un
-								concesionario
-							</p>
-							<div className="d-flex justify-content-between">
-								<a
-									href="https://andres-concesionario.netlify.app/"
-									target="_blank"
-									className="btn btn-primary"
-								>
-									Ver proyecto
-								</a>
-								<a
-									href="https://github.com/elcasti04/harrypotter"
-									target="_blank"
-									className="btn btn-outline-primary"
-								>
-									Repositorio
-								</a>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<hr />
-			</main>
+				</main>
 			</div>
 		</>
 	);
