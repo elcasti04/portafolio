@@ -1,6 +1,6 @@
 
 import './App.css'
-import { NavBar } from './components/navbar'
+import { NavBar } from './components/NavBar'
 import { Inicio } from './components/Inicio'
 import { AcercaDeMi } from './components/acerca-de-mi'
 import { Habilidades } from './components/habilidades'
