@@ -260,7 +260,7 @@ export const Proyectos = () => {
 								<img
 										id="img-proyect"
 										src="/img/pAndresgpt.png"
-										alt="proyecto 7"
+										alt="proyecto 8"
 										className="img-fluid rounded-3 mb-3 shadow-sm"
 									/>
 									<h5 className="card-title fw-bold">AndresGPT</h5>
@@ -289,7 +289,7 @@ export const Proyectos = () => {
 								<img
 										id="img-proyect"
 										src="/img/pMilo.png"
-										alt="proyecto 7"
+										alt="proyecto 9"
 										className="img-fluid rounded-3 mb-3 shadow-sm"
 									/>
 									<h5 className="card-title fw-bold">Milo-j-Music</h5>
@@ -318,7 +318,7 @@ export const Proyectos = () => {
 								<img
 										id="img-proyect"
 										src="/img/pIreth.png"
-										alt="proyecto 7"
+										alt="proyecto 10"
 										className="img-fluid rounded-3 mb-3 shadow-sm"
 									/>
 									<h5 className="card-title fw-bold">Portafolio</h5>

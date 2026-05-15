@@ -42,7 +42,7 @@ export const Habilidades = () => {
 						</li>
 						<li className="card col-12 col-md-6 col-lg-2 justify-content-center align-items-center">
 							<img
-								src="../../public/img/iconos/icons8-react-native.gif"
+								src="/img/iconos/icons8-react-native.gif"
 								alt="react-icono"
 								className="mb-3"
 								style={{backgroundColor:'white'}}
