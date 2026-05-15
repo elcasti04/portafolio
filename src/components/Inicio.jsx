@@ -19,7 +19,7 @@ export const Inicio = () => {
 							<img
 								className="img-fluid rounded-circle shadow"
 								style={{ maxWidth: '350px' }}
-								src="../../src/img/perfil2.jpg"
+								src="/img/perfil2.jpg"
 								alt="foto de perfil"
 							/>
 						</div>
