@@ -39,7 +39,7 @@ export const Proyectos = () => {
 								<div className="">
 									<img
 										id="img-proyect"
-										src="../../public/img/imagenR-a-M.png"
+										src="/img/imagenR-a-M.png"
 										alt="proyecto 1"
 										className="img-fluid rounded-3 mb-3"
 									/>
@@ -71,7 +71,7 @@ export const Proyectos = () => {
 								<div className="">
 									<img
 										id="img-proyect"
-										src="../../public/img/img-F-app.png"
+										src="/img/img-F-app.png"
 										alt="proyecto 2"
 										className="img-fluid rounded-3 mb-3"
 									/>
@@ -105,7 +105,7 @@ export const Proyectos = () => {
 								<div className="text-center">
 									<img
 										id="img-proyect"
-										src="../../public/img/imgW-app.png"
+										src="/img/imgW-app.png"
 										alt="proyecto 3"
 										className="img-fluid rounded-3 mb-3 shadow-sm"
 									/>
@@ -136,7 +136,7 @@ export const Proyectos = () => {
 								<div className="text-center">
 									<img
 										id="img-proyect"
-										src="../../public/img/pokemon.jpg"
+										src="/img/pokemon.jpg"
 										alt="proyecto 4"
 										className="img-fluid rounded-3 mb-3 shadow-sm"
 									/>
@@ -167,7 +167,7 @@ export const Proyectos = () => {
 								<div className="text-center">
 									<img
 										id="img-proyect"
-										src="../../public/img/latam45.png"
+										src="/img/latam45.png"
 										alt="proyecto 5"
 										className="img-fluid rounded-3 mb-3 shadow-sm"
 									/>
@@ -199,7 +199,7 @@ export const Proyectos = () => {
 								<div className="text-center">
 									<img
 										id="img-proyect"
-										src="../../public/img/concesionario.png"
+										src="/img/concesionario.png"
 										alt="proyecto 6"
 										className="img-fluid rounded-3 mb-3 shadow-sm"
 									/>
@@ -230,7 +230,7 @@ export const Proyectos = () => {
 							<div>
 								<img
 										id="img-proyect"
-										src="../../public/img/pNotas.png"
+										src="/img/pNotas.png"
 										alt="proyecto 7"
 										className="img-fluid rounded-3 mb-3 shadow-sm"
 									/>
@@ -259,7 +259,7 @@ export const Proyectos = () => {
 							<div>
 								<img
 										id="img-proyect"
-										src="../../public/img/pAndresgpt.png"
+										src="/img/pAndresgpt.png"
 										alt="proyecto 7"
 										className="img-fluid rounded-3 mb-3 shadow-sm"
 									/>
@@ -288,7 +288,7 @@ export const Proyectos = () => {
 							<div>
 								<img
 										id="img-proyect"
-										src="../../public/img/pMilo.png"
+										src="/img/pMilo.png"
 										alt="proyecto 7"
 										className="img-fluid rounded-3 mb-3 shadow-sm"
 									/>
@@ -317,7 +317,7 @@ export const Proyectos = () => {
 							<div>
 								<img
 										id="img-proyect"
-										src="../../public/img/pIreth.png"
+										src="/img/pIreth.png"
 										alt="proyecto 7"
 										className="img-fluid rounded-3 mb-3 shadow-sm"
 									/>
