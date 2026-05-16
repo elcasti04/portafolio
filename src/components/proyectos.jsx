@@ -8,7 +8,7 @@ export const Proyectos = () => {
 			setTimeout(() => {
 			setMostrar(mostrar + 1)
 			}, 2000)
-		}else if(mostrar == 11){
+		}else if(mostrar == 14){
 			setMostrar(1)
 		}
 	}
@@ -61,7 +61,7 @@ export const Proyectos = () => {
 											target="_blank"
 											className="btn btn-outline-primary btn-sm rounded-pill px-3"
 										>
-											Repo
+											Repositorio
 										</a>
 									</div>
 								</div>
@@ -95,7 +95,7 @@ export const Proyectos = () => {
 											target="_blank"
 											className="btn btn-outline-primary btn-sm rounded-pill px-3"
 										>
-											Repo
+											Repositorio
 										</a>
 									</div>
 								</div>
@@ -126,7 +126,7 @@ export const Proyectos = () => {
 											target="_blank"
 											className="btn btn-outline-primary btn-sm rounded-pill px-3"
 										>
-											Repo
+											Repositorio
 										</a>
 									</div>
 								</div>
@@ -157,7 +157,7 @@ export const Proyectos = () => {
 											target="_blank"
 											className="btn btn-outline-primary btn-sm rounded-pill px-3"
 										>
-											Repo
+											Repositorio
 										</a>
 									</div>
 								</div>
@@ -189,7 +189,7 @@ export const Proyectos = () => {
 											target="_blank"
 											className="btn btn-outline-primary btn-sm rounded-pill px-3"
 										>
-											Repo
+											Repositorio
 										</a>
 									</div>
 								</div>
@@ -220,7 +220,7 @@ export const Proyectos = () => {
 											target="_blank"
 											className="btn btn-outline-primary btn-sm rounded-pill px-3"
 										>
-											Repo
+											Repositorio
 										</a>
 									</div>
 								</div>
@@ -251,7 +251,7 @@ export const Proyectos = () => {
 											target="_blank"
 											className="btn btn-outline-primary btn-sm rounded-pill px-3"
 										>
-											Repo
+											Repositorio
 										</a>
 									</div>
 							</div>)}
@@ -280,7 +280,7 @@ export const Proyectos = () => {
 											target="_blank"
 											className="btn btn-outline-primary btn-sm rounded-pill px-3"
 										>
-											Repo
+											Repositorio
 										</a>
 									</div>
 							</div>)}
@@ -309,7 +309,7 @@ export const Proyectos = () => {
 											target="_blank"
 											className="btn btn-outline-primary btn-sm rounded-pill px-3"
 										>
-											Repo
+											Repositorio
 										</a>
 									</div>
 							</div>)}
@@ -338,10 +338,119 @@ export const Proyectos = () => {
 											target="_blank"
 											className="btn btn-outline-primary btn-sm rounded-pill px-3"
 										>
-											Repo
+											Repositorio
 										</a>
 									</div>
 							</div>)}
+
+							{mostrar === 11 &&( 
+							<div>
+								<img
+										id="img-proyect"
+										src="/img/pCalc.png"
+										alt="proyecto 11"
+										className="img-fluid rounded-3 mb-3 shadow-sm"
+									/>
+									<h5 className="card-title fw-bold">calculadora</h5>
+									<p className="card-text small">
+										Proyecto de ua calculadora 100% funcional.
+									</p>
+									<div className="d-flex justify-content-center gap-2 mt-2">
+										<a
+											href="https://calculadora-andres.netlify.app/"
+											target="_blank"
+											className="btn btn-primary btn-sm rounded-pill px-3"
+										>
+											Ver proyecto
+										</a>
+										<a
+											href="https://github.com/elcasti04/calculadora"
+											target="_blank"
+											className="btn btn-outline-primary btn-sm rounded-pill px-3"
+										>
+											Repositorio
+										</a>
+									</div>
+							</div>)}
+
+							{mostrar === 12 &&( 
+							<div>
+								<img
+										id="img-proyect"
+										src="/img/pSnake.png"
+										alt="proyecto 12"
+										className="img-fluid rounded-3 mb-3 shadow-sm"
+									/>
+									<h5 className="card-title fw-bold">Snake game</h5>
+									<p className="card-text small">
+										Replica del Famoso Juego de la Serpiente.
+									</p>
+									<div className="d-flex justify-content-center gap-2 mt-2">
+										<a
+											href="https://snakegame-andres.netlify.app/"
+											target="_blank"
+											className="btn btn-primary btn-sm rounded-pill px-3"
+										>
+											Ver proyecto
+										</a>
+										<a
+											href="https://github.com/elcasti04/juegoSerpiente"
+											target="_blank"
+											className="btn btn-outline-primary btn-sm rounded-pill px-3"
+										>
+											Repositorio
+										</a>
+									</div>
+							</div>)}
+
+							{mostrar === 13 &&( 
+							<div>
+								<img
+										id="img-proyect"
+										src="/img/pTictactoe.png"
+										alt="proyecto 13"
+										className="img-fluid rounded-3 mb-3 shadow-sm"
+									/>
+									<h5 className="card-title fw-bold">Tic Tac Toe</h5>
+									<p className="card-text small">
+										Replica del Famoso Juego Tic Tac Toe.
+									</p>
+									<div className="d-flex justify-content-center gap-2 mt-2">
+										<a
+											href="https://tictactoe-andres.netlify.app/"
+											target="_blank"
+											className="btn btn-primary btn-sm rounded-pill px-3"
+										>
+											Ver proyecto
+										</a>
+										<a
+											href="https://github.com/elcasti04/tictactoe"
+											target="_blank"
+											className="btn btn-outline-primary btn-sm rounded-pill px-3"
+										>
+											Repositorio
+										</a>
+									</div>
+							</div>)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 							
 							{/*Botones */}
 							<div className='d-flex gap-4'>
