@@ -7,7 +7,7 @@ export const Proyectos = () => {
 		if(mostrar < 11){
 			setTimeout(() => {
 			setMostrar(mostrar + 1)
-			}, 2000)
+			}, 3000)
 		}else if(mostrar == 14){
 			setMostrar(1)
 		}
