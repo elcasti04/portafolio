@@ -4,11 +4,11 @@ import { useState } from 'react';
 export const Proyectos = () => {
 	const [mostrar, setMostrar] = useState(1);
 	function cambiar () {
-		if(mostrar < 14){
+		if(mostrar <= 13){
 			setTimeout(() => {
 			setMostrar(mostrar + 1)
 			}, 3000)
-		}else if(mostrar == 13){
+		}else if(mostrar == 14){
 			setMostrar(1)
 		}
 	}

@@ -7,6 +7,8 @@ import { Habilidades } from './components/habilidades'
 import { Proyectos } from './components/proyectos'
 import { Contacto } from './components/contacto'
 import { Footer } from './components/Footer'
+import { ChatBot } from './components/chatbot'
+
 
 function App() {
 
@@ -19,7 +21,8 @@ function App() {
     <Proyectos></Proyectos>
     <Contacto></Contacto>
     <Footer></Footer>
-    
+    <ChatBot></ChatBot>
+
     </>
   )
 }
