@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import './page.css/chatbot.css'
 
+
 export const ChatBot = () => {
-    const API_KEY = 'AIzaSyBWyQxKtcFXMbViAC0gguwu12FifSN2j0U'
+    const API_KEY = import.meta.env.VITE_API_URL
     const [loader, setLoader] = useState(false)
     const [abierto, setAbierto] = useState(false)
     const [mensajes, setMensajes] = useState([
