@@ -4,7 +4,7 @@ import { useState } from 'react';
 export const Proyectos = () => {
 	const [mostrar, setMostrar] = useState(1);
 	function cambiar () {
-		if(mostrar <= 13){
+		if(mostrar <= 14){
 			setTimeout(() => {
 			setMostrar(mostrar + 1)
 			}, 3000)
@@ -425,6 +425,35 @@ export const Proyectos = () => {
 										</a>
 										<a
 											href="https://github.com/elcasti04/tictactoe"
+											target="_blank"
+											className="btn btn-outline-primary btn-sm rounded-pill px-3"
+										>
+											Repositorio
+										</a>
+									</div>
+							</div>)}
+							{mostrar === 14 &&( 
+							<div>
+								<img
+										id="img-proyect"
+										src="/img/piedra-papel-o-tijeras.png"
+										alt="proyecto 14"
+										className="img-fluid rounded-3 mb-3 shadow-sm"
+									/>
+									<h5 className="card-title fw-bold">Tic Tac Toe</h5>
+									<p className="card-text small">
+										Replica del Famoso Juego Piedra Papel o Tijeras
+									</p>
+									<div className="d-flex justify-content-center gap-2 mt-2">
+										<a
+											href="https://piedrapapelotijerasandres.netlify.app/"
+											target="_blank"
+											className="btn btn-primary btn-sm rounded-pill px-3"
+										>
+											Ver proyecto
+										</a>
+										<a
+											href="https://github.com/elcasti04/piedra-papel-o-tijeras"
 											target="_blank"
 											className="btn btn-outline-primary btn-sm rounded-pill px-3"
 										>
