@@ -4,7 +4,7 @@ export const AcercaDeMi = () => {
     function descargar () {
         const lang = document.documentElement.lang
         const cvUrl = 
-        lang === 'en' ? "/documents/Currículum.Cv.pdf" : "/documents/CurrículumEng.Cv.pdf"
+        lang === 'en' ? "/documents/CurrículumCv.pdf" : "/documents/CurrículumEngCv.pdf"
         const link = document.createElement('a')
         link.href = cvUrl 
         link.download = 'Currículum.Cv-Andres-Castro.pdf'
