@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './page.css/chatbot.css'
+import './style/chatbot.css'
 
 
 export const ChatBot = () => {

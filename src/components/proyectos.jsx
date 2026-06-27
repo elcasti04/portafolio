@@ -1,4 +1,4 @@
-import './page.css/proyectos.css'
+import './style/proyectos.css'
 import { useState } from 'react';
 
 export const Proyectos = () => {

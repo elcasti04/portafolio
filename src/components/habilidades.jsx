@@ -1,4 +1,4 @@
-import './page.css/habilidades.css'
+import './style/habilidades.css'
 export const Habilidades = () => {
 	return (
 		<>

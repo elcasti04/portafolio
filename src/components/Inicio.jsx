@@ -1,4 +1,4 @@
-import './page.css/inicio.css'
+import './style/inicio.css'
 export const Inicio = () => {
 	return (
 		<div id="inicio">

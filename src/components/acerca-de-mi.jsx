@@ -1,10 +1,10 @@
-import './page.css/acercademi.css'
+import './style/acercademi.css'
 export const AcercaDeMi = () => {
 
     function descargar () {
         const lang = document.documentElement.lang
         const cvUrl = 
-        lang === 'en' ? "/public/documents/Currículum.Cv.pdf" : "/public/documents/CurrículumEng.Cv.pdf"
+        lang === 'en' ? "documents/Currículum.Cv.pdf" : "documents/CurrículumEng.Cv.pdf"
         const link = document.createElement('a')
         link.href = cvUrl 
         link.download = 'Currículum.Cv-Andres-Castro.pdf'
