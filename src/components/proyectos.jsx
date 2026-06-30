@@ -1,18 +1,15 @@
 import './style/proyectos.css'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const Proyectos = () => {
 	const [mostrar, setMostrar] = useState(1);
-	function cambiar () {
-		if(mostrar <= 14){
-			setTimeout(() => {
-			setMostrar(mostrar + 1)
-			}, 3000)
-		}else if(mostrar > 14){
-			setMostrar(1)
-		}
-	}
-	
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setMostrar((prev) => prev >= 14 ? 1 : prev + 1)
+		}, 3000)
+		return () => clearTimeout(timer)
+	}, [mostrar])
 	return (
 		<>
 			<div id="proyectos">
@@ -35,6 +32,7 @@ export const Proyectos = () => {
 							style={{ height: 'auto', color:'white' }}
 							className="card col-11 col-md-8 col-lg-6 mx-auto d-flex justify-content-center align-items-center"
 						>
+							<div>
 							{mostrar === 1 && (
 								<div className="">
 									<img
@@ -440,7 +438,7 @@ export const Proyectos = () => {
 										alt="proyecto 14"
 										className="img-fluid rounded-3 mb-3 shadow-sm"
 									/>
-									<h5 className="card-title fw-bold">Tic Tac Toe</h5>
+									<h5 className="card-title fw-bold">Pidra Papel o Tijeras</h5>
 									<p className="card-text small">
 										Replica del Famoso Juego Piedra Papel o Tijeras
 									</p>
@@ -462,49 +460,25 @@ export const Proyectos = () => {
 									</div>
 							</div>)}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+							</div>
 
 							
 							{/*Botones */}
 							<div className='d-flex gap-4'>
 								<button
 								className="btn btn-dark mt-4 px-4 rounded-pill"
-								onClick={() => {
-									if (mostrar >= mostrar) {
-										setMostrar(mostrar - 1);
-									}
-								}}
+								 onClick={() => setMostrar((prev) => Math.max(1, prev - 1))}
 							>
 								Anterior
 							</button>
 
 							<button
 								className="btn btn-dark mt-4 px-4 rounded-pill"
-								onClick={() => {
-									if (mostrar <= mostrar) {
-										setMostrar(mostrar + 1);
-									}
-								}}
+								onClick={() => setMostrar((prev) => Math.min(14, prev + 1))}
 							>
 								Siguiente
 							</button>
-						{cambiar()}
+						
 
 							</div>
 						</div>
