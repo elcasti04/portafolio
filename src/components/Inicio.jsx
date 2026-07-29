@@ -7,7 +7,7 @@ export const Inicio = () => {
 			className="inicio container-fluid"
 			style={{ minHeight: '100vh' }}>
 			<div className="col">
-				<div className="d-flex col align-items-between">
+				<div className="d-flex col flex-wrap align-items-between">
 					{/* IZQUIERDA */}
 					<div className="col-12 col-lg-6 text-center mb-4 mb-lg-0">
 						<h5 className="text-uppercase text-secondary mb-3">
