@@ -1,0 +1,314 @@
+/* ==========================================
+   TESTIMONIOS
+========================================== */
+
+#testimonios{
+    padding:5rem 1.5rem;
+    background-color: #0f172a;
+}
+
+/*==========================================
+TITULO
+==========================================*/
+
+.titulo-testimonios{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    margin-bottom:4rem;
+}
+
+.titulo-testimonios h2{
+    font-size:clamp(2.2rem,4vw,3rem);
+    color:var(--heading);
+    margin-bottom:1rem;
+}
+
+.titulo-testimonios p{
+    color:var(--text-muted);
+    line-height:1.8;
+    font-size:1rem;
+}
+
+/*==========================================
+GRID
+==========================================*/
+
+.testimonios-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(380px,1fr));
+
+    gap:2rem;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+/*==========================================
+CARD
+==========================================*/
+
+.card-testimonio{
+
+    position:relative;
+
+    padding:2rem;
+
+    border-radius:24px;
+
+    background:rgba(8,13,24,.92);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+.card-testimonio:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 30px 70px rgba(0,0,0,.45);
+
+}
+
+/*==========================================
+COMILLAS
+==========================================*/
+
+.comillas{
+
+    position:absolute;
+
+    top:10px;
+
+    right:20px;
+
+    font-size:6rem;
+
+    color:rgba(212,175,55,.15);
+
+    font-family:Georgia;
+
+    user-select:none;
+
+}
+
+/*==========================================
+PROYECTO
+==========================================*/
+
+.card-testimonio h3{
+
+    color:var(--gold);
+
+    margin-bottom:1.3rem;
+
+    font-size:1.3rem;
+
+}
+
+/*==========================================
+DESCRIPCION
+==========================================*/
+
+.descripcion{
+
+    color:var(--text-muted);
+
+    line-height:1.9;
+
+    text-align:justify;
+
+    margin-bottom:2rem;
+
+}
+
+/*==========================================
+ESTRELLAS
+==========================================*/
+
+.estrellas{
+
+    font-size:1.3rem;
+
+    letter-spacing:4px;
+
+    margin-bottom:2rem;
+
+}
+
+/*==========================================
+AUTOR
+==========================================*/
+
+.autor{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding-top:1rem;
+
+}
+
+.autor h4{
+
+    color:var(--gold);
+
+    margin-bottom:.4rem;
+
+}
+
+.autor span{
+
+    color:var(--text-muted);
+
+}
+
+/*==========================================
+HR
+==========================================*/
+
+#testimonios hr{
+
+    width:80px;
+
+    height:3px;
+
+    border:none;
+
+    margin:4rem auto 0;
+
+    background:
+    linear-gradient(
+        90deg,
+        var(--gold),
+        transparent
+    );
+
+}
+
+/*==========================================
+LIGHT MODE
+==========================================*/
+.light-mode #testimonios {
+    background-color: #fff;
+}
+.light-mode .card-testimonio{
+
+    background:#fff;
+
+    border:1px solid rgba(15,23,42,.08);
+
+    box-shadow:var(--shadow);
+
+}
+
+.light-mode .card-testimonio:hover{
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.light-mode .descripcion{
+
+    color:var(--text);
+
+}
+
+.light-mode .autor{
+
+    border-color:rgba(15,23,42,.08);
+
+}
+
+.light-mode .autor span{
+
+    color:var(--text-muted);
+
+}
+
+.light-mode .comillas{
+
+    color:rgba(184,150,46,.18);
+
+}
+
+/*==========================================
+RESPONSIVE
+==========================================*/
+
+@media(max-width:992px){
+
+    .testimonios-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    #testimonios{
+
+        padding:4rem 1rem;
+
+    }
+
+    .card-testimonio{
+
+        padding:1.6rem;
+
+    }
+
+    .comillas{
+
+        font-size:4rem;
+
+    }
+
+    .descripcion{
+
+        text-align:left;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .card-testimonio{
+
+        padding:1.3rem;
+
+    }
+
+    .card-testimonio h3{
+
+        font-size:1.1rem;
+
+    }
+
+    .descripcion{
+
+        font-size:.9rem;
+
+    }
+
+    .estrellas{
+
+        font-size:1.1rem;
+
+    }
+
+}

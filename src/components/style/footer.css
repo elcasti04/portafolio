@@ -1,0 +1,175 @@
+/*==========================================
+FOOTER
+==========================================*/
+
+.site-footer{
+
+    background:#0f172a;
+
+    color:white;
+
+    padding:4rem 1.5rem 2rem;
+
+}
+
+.footer-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:3rem;
+
+}
+
+.footer-logo img{
+
+    width:70px;
+
+    margin-bottom:1rem;
+    
+    border-radius: 50%;
+
+}
+
+.footer-logo h3{
+
+    color:var(--gold);
+
+    margin-bottom:.5rem;
+
+}
+
+.footer-logo p{
+
+    color:var(--text-muted);
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.8rem;
+
+}
+
+.footer-links h4,
+.footer-contacto h4{
+
+    color:var(--gold);
+
+    margin-bottom:1rem;
+
+}
+
+.footer-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:var(--gold);
+
+    padding-left:6px;
+
+}
+
+.footer-contacto p{
+
+    color:var(--text-muted);
+
+    margin-bottom:.8rem;
+
+}
+
+.site-footer hr{
+
+    margin:3rem auto 2rem;
+
+    border:none;
+
+    height:1px;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.footer-copy{
+
+    text-align:center;
+
+}
+
+.footer-copy p{
+
+    color:var(--text-muted);
+
+    margin:.4rem 0;
+
+}
+
+/*==========================================
+LIGHT MODE
+==========================================*/
+
+.light-mode .site-footer{
+
+    background:#ffffff;
+
+    box-shadow:0 -5px 20px rgba(0,0,0,.05);
+
+}
+
+.light-mode .footer-links a{
+
+    color:var(--text);
+
+}
+
+.light-mode .footer-contacto p,
+.light-mode .footer-logo p,
+.light-mode .footer-copy p{
+
+    color:var(--text-muted);
+
+}
+
+.light-mode .site-footer hr{
+
+    background:rgba(0,0,0,.08);
+
+}
+
+/*==========================================
+RESPONSIVE
+==========================================*/
+
+@media(max-width:768px){
+
+    .footer-container{
+
+        text-align:center;
+
+    }
+
+    .footer-links{
+
+        align-items:center;
+
+    }
+
+}

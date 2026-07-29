@@ -1,105 +1,331 @@
-/* ===== CONTENEDOR ===== */
-#habilidades .habilidades {
-  padding: 4rem 1.5rem;
+/* ==========================================
+   HABILIDADES
+========================================== */
+
+#habilidades .habilidades{
+    padding:5rem 1.5rem;
+    background:linear-gradient(180deg,#0f172a 0%,#111827 100%);
 }
 
-/* ===== TÍTULO ===== */
-#habilidades h2 {
-  font-size: clamp(2rem, 3vw, 2.6rem);
-  font-weight: 700;
-  color: var(--heading);
-  margin-bottom: 2rem;
-  letter-spacing: -0.02em;
+/*==========================================
+TITULO
+==========================================*/
+
+#habilidades h2{
+    font-size:clamp(2.2rem,4vw,3rem);
+    font-weight:700;
+    color:var(--heading);
+    margin-bottom:3rem;
+    letter-spacing:-.02em;
 }
 
-/* ===== SUBTÍTULOS ===== */
-#habilidades h3 {
-  color: var(--gold);
-  margin-bottom: 1.5rem;
-  font-weight: 600;
+/*==========================================
+SUBTITULOS
+==========================================*/
+
+#habilidades h3{
+    color:var(--gold);
+    margin-bottom:2rem;
+    font-weight:600;
 }
 
-/* ===== GRID LISTA ===== */
-#habilidades ul {
-  padding: 0;
+/*==========================================
+LISTA
+==========================================*/
+
+#habilidades ul{
+    padding:0;
 }
 
-/* ===== CARDS ===== */
-#habilidades .card {
-  padding: 1.2rem;
-  border-radius: 1.2rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(8, 13, 24, 0.9);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
-  transition: all 0.25s ease;
-  text-align: center;
+/*==========================================
+CARDS
+==========================================*/
+
+#habilidades .card{
+
+    background:rgba(17,24,39,.75);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:1.5rem;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+    overflow:hidden;
+
 }
 
-/* ✨ HOVER PRO */
-#habilidades .card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+#habilidades .card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(184,150,46,.35);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.45);
+
 }
 
-/* ===== ICONOS ===== */
-#habilidades .card img {
-  padding: 0.4rem;
-  border-radius: 0.6rem;
-  background: #fff;
+/*==========================================
+ICONOS
+==========================================*/
+
+#habilidades .card img{
+
+    width:70px;
+
+    height:70px;
+
+    object-fit:contain;
+
+    background:#fff;
+
+    border-radius:14px;
+
+    padding:12px;
+
+    transition:.35s;
+
 }
 
-/* ===== TITULO CARD ===== */
-#habilidades .card-title {
-  color: var(--gold);
-  margin-top: 0.5rem;
-  font-weight: 600;
+#habilidades .card:hover img{
+
+    transform:scale(1.08);
+
 }
 
-/* ===== TEXTO ===== */
-#habilidades .card-text {
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  line-height: 1.5;
+/*==========================================
+TITULO CARD
+==========================================*/
+
+#habilidades .card-title{
+
+    color:var(--gold);
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+    margin-top:1rem;
+
 }
 
-/* ===== HABILIDADES BLANDAS ===== */
-#habilidades .hb {
-  padding: 0.7rem 1rem;
-  border-radius: 999px;
-  background: rgba(212, 175, 55, 0.08);
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  color: var(--gold);
-  font-weight: 500;
-  transition: all 0.2s ease;
+/*==========================================
+DESCRIPCION
+==========================================*/
+
+#habilidades .card-text{
+
+    color:var(--text-muted);
+
+    line-height:1.7;
+
+    font-size:.9rem;
+
 }
 
-/* hover suave */
-#habilidades .hb:hover {
-  background: rgba(212, 175, 55, 0.18);
-  transform: translateY(-2px);
+/*==========================================
+HABILIDADES BLANDAS
+==========================================*/
+
+#habilidades .hb{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:.75rem 1.2rem;
+
+    border-radius:999px;
+
+    background:rgba(184,150,46,.08);
+
+    border:1px solid rgba(184,150,46,.3);
+
+    color:var(--gold);
+
+    font-weight:500;
+
+    transition:.3s;
+
 }
 
-/* ===== HR ===== */
-#habilidades hr {
-  width: 80px;
-  height: 3px;
-  margin: 3rem auto 0;
-  border: none;
-  background: linear-gradient(
-    90deg,
-    var(--gold),
-    transparent
-  );
-  opacity: 0.8;
+#habilidades .hb:hover{
+
+    background:rgba(184,150,46,.18);
+
+    transform:translateY(-3px);
+
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  #habilidades .card {
-    padding: 1rem;
-  }
+/*==========================================
+HR
+==========================================*/
 
-  #habilidades .card-text {
-    font-size: 0.8rem;
-  }
+#habilidades hr{
+
+    width:80px;
+
+    height:3px;
+
+    margin:4rem auto 0;
+
+    border:none;
+
+    background:
+    linear-gradient(
+        90deg,
+        var(--gold),
+        transparent
+    );
+
+}
+
+/*==========================================
+LIGHT MODE
+==========================================*/
+
+.light-mode #habilidades .habilidades{
+
+    background:#f8fafc;
+
+}
+
+.light-mode #habilidades .card{
+
+    background:#fff;
+
+    border:1px solid rgba(15,23,42,.08);
+
+    box-shadow:var(--shadow);
+
+}
+
+.light-mode #habilidades .card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.light-mode #habilidades .card img{
+
+    background:#ffffff;
+
+}
+
+.light-mode #habilidades .card-title{
+
+    color:var(--gold);
+
+}
+
+.light-mode #habilidades .card-text{
+
+    color:var(--text-muted);
+
+}
+
+.light-mode #habilidades .hb{
+
+    background:rgba(184,150,46,.12);
+
+    border:1px solid rgba(184,150,46,.35);
+
+}
+
+.light-mode #habilidades .hb:hover{
+
+    background:rgba(184,150,46,.2);
+
+}
+
+.light-mode #habilidades hr{
+
+    background:
+    linear-gradient(
+        90deg,
+        var(--gold),
+        transparent
+    );
+
+}
+
+/*==========================================
+RESPONSIVE
+==========================================*/
+
+@media(max-width:992px){
+
+    #habilidades .card{
+
+        padding:1.3rem;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    #habilidades .habilidades{
+
+        padding:4rem 1rem;
+
+    }
+
+    #habilidades .card{
+
+        padding:1.2rem;
+
+    }
+
+    #habilidades .card img{
+
+        width:60px;
+
+        height:60px;
+
+    }
+
+    #habilidades .card-text{
+
+        font-size:.85rem;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    #habilidades .card{
+
+        padding:1rem;
+
+    }
+
+    #habilidades .card-title{
+
+        font-size:1rem;
+
+    }
+
+    #habilidades .card img{
+
+        width:55px;
+
+        height:55px;
+
+    }
+
 }

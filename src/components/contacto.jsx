@@ -105,14 +105,30 @@ export const Contacto = () => {
 							LinkedIn
 						</a>
 					</li>
+					<li>
+						<a
+							href="https://github.com/elcasti04"
+							target="_blank"
+							className="btn btn-outline-primary"
+						>
+							<img
+								width="30"
+								src="https://img.icons8.com/glyph-neue/64/github.png"
+								alt="gitHub"
+								className="me-2"
+							/>
+							GitHub
+						</a>
+					</li>
 				</ul>
 			</div>
+			
 
 			{/* FORMULARIO */}
 			<div className="col-12 col-md-6">
 				<form onSubmit={handleSubmit} className="p-4 border rounded">
 					<h2 className="mb-4">Ponte en contacto conmigo</h2>
-
+					<strong className="disponible text-primary">Disponible para trabajo remoto</strong>
 					<div className="mb-3 text-start">
 						<label className="form-label">
 							<strong>Nombre:</strong>

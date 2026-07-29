@@ -2,12 +2,13 @@
 import './App.css'
 import { NavBar } from './components/Navbar'
 import { Inicio } from './components/Inicio'
-import { AcercaDeMi } from './components/acerca-de-mi'
+import { Estadisticas } from './components/estadisticas'
 import { Habilidades } from './components/habilidades'
 import { Proyectos } from './components/proyectos'
 import { Contacto } from './components/contacto'
 import { Footer } from './components/Footer'
 import { ChatBot } from './components/chatbot'
+import Testimonios from './components/testimonios'
 
 
 function App() {
@@ -16,12 +17,12 @@ function App() {
     <>
     <NavBar></NavBar>
     <Inicio/>
-    <AcercaDeMi></AcercaDeMi>
     <Habilidades></Habilidades>
+    <Estadisticas></Estadisticas>
     <Proyectos></Proyectos>
+    <Testimonios></Testimonios>
     <Contacto></Contacto>
     <Footer></Footer>
-    <ChatBot></ChatBot>
 
     </>
   )

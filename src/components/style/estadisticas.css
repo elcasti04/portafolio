@@ -1,0 +1,257 @@
+/* ==========================================
+   ESTADÍSTICAS
+========================================== */
+
+.estadisticas{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:2.5rem;
+
+    padding:5rem 2rem;
+
+    background:linear-gradient(180deg,#0f172a 0%,#111827 100%);
+
+}
+
+/*==========================================
+CARD
+==========================================*/
+
+.estadisticas .estadistica{
+
+    width:260px;
+
+    text-align:center;
+
+    padding:2rem;
+
+    border-radius:22px;
+
+    background:rgba(17,24,39,.75);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.estadisticas .estadistica:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(184,150,46,.35);
+
+    box-shadow:0 30px 60px rgba(0,0,0,.45);
+
+}
+
+/*==========================================
+ICONO
+==========================================*/
+
+.estadisticas img{
+
+    width:75px;
+
+    height:75px;
+
+    object-fit:contain;
+
+    padding:14px;
+
+    border-radius:18px;
+
+    background:#fff;
+
+    margin-bottom:1.2rem;
+
+    transition:.35s;
+
+}
+
+.estadisticas .estadistica:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/*==========================================
+NUMERO
+==========================================*/
+
+.estadisticas h2{
+
+    color:var(--gold);
+
+    font-size:2.5rem;
+
+    margin-bottom:.6rem;
+
+    font-weight:700;
+
+}
+
+/*==========================================
+TEXTO
+==========================================*/
+
+.estadisticas p{
+
+    color:var(--text-muted);
+
+    font-size:1rem;
+
+    line-height:1.7;
+
+    margin:0;
+
+}
+
+/*==========================================
+LIGHT MODE
+==========================================*/
+
+.light-mode .estadisticas{
+
+    background:#f8fafc;
+
+}
+
+.light-mode .estadisticas .estadistica{
+
+    background:#fff;
+
+    border:1px solid rgba(15,23,42,.08);
+
+    box-shadow:var(--shadow);
+
+}
+
+.light-mode .estadisticas .estadistica:hover{
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.light-mode .estadisticas h2{
+
+    color:var(--gold);
+
+}
+
+.light-mode .estadisticas p{
+
+    color:var(--text-muted);
+
+}
+
+.light-mode .estadisticas img{
+
+    background:#ffffff;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+}
+
+/*==========================================
+RESPONSIVE
+==========================================*/
+
+@media(max-width:992px){
+
+    .estadisticas{
+
+        gap:2rem;
+
+        padding:4rem 2rem;
+
+    }
+
+    .estadisticas .estadistica{
+
+        width:220px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .estadisticas{
+
+        flex-direction:column;
+
+        padding:4rem 1rem;
+
+    }
+
+    .estadisticas .estadistica{
+
+        width:100%;
+
+        max-width:350px;
+
+    }
+
+    .estadisticas h2{
+
+        font-size:2rem;
+
+    }
+
+    .estadisticas img{
+
+        width:65px;
+
+        height:65px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .estadisticas{
+
+        padding:3rem 1rem;
+
+    }
+
+    .estadisticas .estadistica{
+
+        padding:1.5rem;
+
+    }
+
+    .estadisticas h2{
+
+        font-size:1.8rem;
+
+    }
+
+    .estadisticas p{
+
+        font-size:.9rem;
+
+    }
+
+    .estadisticas img{
+
+        width:58px;
+
+        height:58px;
+
+    }
+
+}

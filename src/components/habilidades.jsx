@@ -5,12 +5,11 @@ export const Habilidades = () => {
 			<div id="habilidades">
 				<main
 			
-				style={{ minHeight: '95vh' }}
+				style={{ minHeight: '100vh' }}
 				className="habilidades section-block container-fluid row col-12 p-4"
 			>
-				<h2 className="text-center">Habilidades</h2>
 				<div className="col-12 col-md-12 col-lg-12">
-					<h3 className="text-center">Habilidades Técnicas</h3>
+					<h3 className="text-center">Habilidades</h3>
 					<ul className="list-unstiled text-center d-flex flex-wrap justify-content-center gap-2">
 						<li className="card col-12 col-md-6 col-lg-2 justify-content-center align-items-center">
 							<img
@@ -22,10 +21,6 @@ export const Habilidades = () => {
 								className="mb-3"
 							/>
 							<h5 className="card-title">HTML</h5>
-							<p className="card-text">
-								Tengo un sólido dominio de HTML5, lo que me permite estructurar
-								páginas web de manera clara, semántica y accesible.
-							</p>
 						</li>
 						<li className="card col-12 col-md-6 col-lg-2 justify-content-center align-items-center">
 							<img
@@ -35,10 +30,6 @@ export const Habilidades = () => {
 								style={{backgroundColor:'white'}}
 							/>
 							<h5 className="card-title">CSS</h5>
-							<p className="card-text">
-								Disfruto trabajar con CSS, ya que me permite dar estilo, color y
-								vida a las páginas con tipografías modernas y efectos dinámicos.
-							</p>
 						</li>
 						<li className="card col-12 col-md-6 col-lg-2 justify-content-center align-items-center">
 							<img
@@ -48,10 +39,6 @@ export const Habilidades = () => {
 								style={{backgroundColor:'white'}}
 							/>
 							<h5 className="card-title">React</h5>
-							<p className="card-text">
-								Manejo React.js para crear interfaces modernas, modulares y
-								eficientes con componentes reutilizables y hooks.
-							</p>
 						</li>
 						<li className="card col-12 col-md-6 col-lg-2 justify-content-center align-items-center">
 							<img
@@ -63,10 +50,6 @@ export const Habilidades = () => {
 								style={{backgroundColor:'white'}}
 							/>
 							<h5 className="card-title">Node.js</h5>
-							<p className="card-text">
-								Con Node.js desarrollo el lado del servidor, creando
-								aplicaciones rápidas, eficientes y escalables.
-							</p>
 						</li>
 						<li className="card col-12 col-md-6 col-lg-2 justify-content-center align-items-center">
 							<img
@@ -78,10 +61,6 @@ export const Habilidades = () => {
 								style={{backgroundColor:'white'}}
 							/>
 							<h5 className="card-title">JavaScript</h5>
-							<p className="card-text">
-								Con JavaScript hago que las páginas sean interactivas,
-								ofreciendo experiencias dinámicas y fluidas.
-							</p>
 						</li>
 						<li className="card col-12 col-md-6 col-lg-2 justify-content-center align-items-center">
 							<img
@@ -93,9 +72,6 @@ export const Habilidades = () => {
 								style={{backgroundColor:'white'}}
 							/>
 							<h5 className="card-title">Express</h5>
-							<p className="card-text">
-								Manejo Express.js para crear APIs rápidas y seguras.
-							</p>
 						</li>
 						<li className="card col-12 col-md-6 col-lg-2 justify-content-center align-items-center">
 							<img
@@ -107,9 +83,6 @@ export const Habilidades = () => {
 								style={{backgroundColor:'white'}}
 							/>
 							<h5 className="card-title">Postgre-SQL</h5>
-							<p className="card-text">
-								Manejo PostgreSQL para bases de datos relacionales eficientes.
-							</p>
 						</li>
 						<li className="card col-12 col-md-6 col-lg-2 justify-content-center align-items-center">
 							<img
@@ -121,9 +94,6 @@ export const Habilidades = () => {
 								className="mb-3"
 							/>
 							<h5 className="card-title">MongoDB</h5>
-							<p className="card-text">
-								Manejo MongoDB para bases de datos NoSQL flexibles.
-							</p>
 						</li>
 						<li className="card col-12 col-md-6 col-lg-2 justify-content-center align-items-center">
 							<img
@@ -135,23 +105,17 @@ export const Habilidades = () => {
 								style={{backgroundColor:'white'}}
 							/>
 							<h5 className="card-title">GitHub</h5>
-							<p className="card-text">
-								Manejo GitHub para control de versiones y trabajo colaborativo.
-							</p>
 						</li>
-					</ul>
-				</div>
-				<div className="">
-					<h3 className="text-center">Habilidades blandas</h3>
-					<ul className="row col-12 list-unstiled text-center d-flex flex-wrap justify-content-center gap-2">
-						<li className="hb border col-6 col-md-4 col-lg-4">
-							Comunicación efectiva
+						<li className="card col-12 col-md-6 col-lg-2 justify-content-center align-items-center">
+							<img
+								width="48"
+								height="48"
+								src="https://img.icons8.com/ios/50/php.png" alt="php"
+								className="mb-3"
+								style={{backgroundColor:'white'}}
+							/>
+							<h5 className="card-title">PHP</h5>
 						</li>
-						<li className="hb border col-6 col-md-4 col-lg-4">
-							Resolución de problemas
-						</li>
-						<li className="hb border col-6 col-md-4 col-lg-4">Adaptabilidad</li>
-						<li className="hb border col-6 col-md-4 col-lg-4">Gestión del tiempo</li>
 					</ul>
 				</div>
 				<hr />

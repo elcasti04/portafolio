@@ -47,9 +47,10 @@ export const ChatBot = () => {
        
         console.log("DATA:", data);
 
-        if (!res.ok) {
-            throw new Error("Error en API");
-        }
+       if (!res.ok) {
+        console.log(data);
+        throw new Error(data.error.message);
+    }
 
         
         const textoBot =
