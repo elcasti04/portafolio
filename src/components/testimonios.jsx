@@ -26,7 +26,7 @@ const Testimonios = () => {
             congregación, ministerios y actividades. Valoramos la comunicación constante, 
             el cumplimiento de los tiempos acordados y la calidad del resultado final. Sin duda,
             recomendamos sus servicios para el desarrollo de proyectos web.`,
-            autor:'Elimey de Jesús Orozco (encargada)',
+            autor:'Elimey de Jesús (encargada)',
             contacto:'(+57) 312 203 3342'
         }
     ]

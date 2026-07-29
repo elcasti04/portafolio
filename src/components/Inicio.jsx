@@ -31,7 +31,7 @@ export const Inicio = () => {
 						<h2 className="fw-bold mb-3"></h2>
 						<hr className="w-25 mx-auto mx-lg-0" />
 
-						<h3 className="fw-semibold">Andres Arturo Castro Orozco</h3>
+						<h3 className="fw-semibold">Andres Arturo Castro</h3>
 
 						<h5 className="mt-3 text-secondary">
 							Full Stack Web Developer
